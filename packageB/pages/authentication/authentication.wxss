@@ -1,0 +1,47 @@
+.form{
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 3%;
+  padding: 25rpx;
+  font-size: 30rpx;
+  box-shadow: 1rpx 2rpx 2rpx 1rpx #b8dfee;
+}
+
+.head{
+  margin-bottom: 40rpx;
+  height: 90rpx;
+  line-height: 100rpx;
+}
+
+.head_item{
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  height: 80rpx;
+  margin-right: 30rpx;
+  background-color: #f3fcff;
+  margin-left: 30rpx;
+}
+
+.head_itemActive{
+  background-color: #065675;
+}
+
+.title{
+  text-align: center;
+  font-weight: 600;
+  font-size: 40rpx;
+  color: #065675;
+  margin-bottom: 50rpx;
+}
+
+.input{
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  border: 1rpx solid #b8dfee;
+  font-size: 30rpx;
+}
+
+.tea{
+  
+}

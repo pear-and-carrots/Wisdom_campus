@@ -1,0 +1,56 @@
+<block wx:if="{{guanli==0}}">
+  <view wx:for="{{detail}}" wx:if="{{show != true}}" data-_id="{{item._id}}" bindtap="getInto" class="box"  data-index="{{index}}">
+  <image src="{{item.avatarUrl}}"></image>
+  <view class="text">
+    <view class="name">{{item.teacher}}</view>
+    <view class="title">{{item.title}}</view>
+  </view>
+  <view class="time_all">
+    <view class="time" style="color:#666666;margin-bottom: 20rpx;">发布时间：{{item.currentTime}}</view>
+    <view class="time" style="color:red">截止日期： {{item.endTime}}</view>
+  </view>
+</view>
+
+<view wx:if="{{show == true}}">
+  <image class="fabu1" src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/返回.png"
+    bindtap="fabu1"></image>
+    <view class="look">
+      <text>恭喜你，您已完成本次作答！</text>
+      <view class="" bindtap="look">查看成绩</view>
+      <block wx:if="{{look == true}}">
+      <view>本次试题共<text style="color:red">{{score.score1}}</text>分，您的得分是<text style="color:green">{{score.score}}</text>分</view>
+      <view>正确答案是：{{correct}}</view></block>
+    </view>
+</view>
+</block>
+  <block wx:if="{{guanli==1}}">
+  <block wx:if="{{xinxi!=''}}">
+     <view class="xinxi_tap">
+    {{xinxi1.title}}
+  </view>
+    <view wx:for="{{xinxi1.qnaire}}" class="box is">
+     {{index+1}}: {{item.key.question}}
+      <view wx:if="{{item.key.type=='单选题'}}">
+       <canvas  canvas-id="pieCanvas" disable-scroll="true" class="canvas"></canvas>
+      </view>
+         <view wx:if="{{item.key.type=='多选题'}}">
+       <canvas  canvas-id="pieCanvas1" disable-scroll="true" class="canvas"></canvas>
+      </view>
+      <view wx:if="{{item.key.type=='判断题'}}">
+       <canvas  canvas-id="pieCanvas2" disable-scroll="true" class="canvas"></canvas>
+      </view>
+      <view wx:if="{{item.key.type=='填空题'}}">
+      <view wx:for="{{xinxi2}}" class="tkt">
+        {{item.stuName}}:{{item.answer[tkt]}}
+      </view>
+        
+      </view>
+    </view>
+  </block>
+<!--  <view wx:if="{{xinxi==''}}">
+    <view class="xinxi_tap">
+    {{xinxi1.title}}
+  </view>
+<view class="wuren">暂时还没有人做答呢</view>
+  </view> -->
+</block>

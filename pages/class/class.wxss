@@ -1,0 +1,354 @@
+page {
+  background-color: rgb(240, 248, 255);
+}
+
+.top {
+  background-color: #0278AE;
+  height: 270rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  position: relative;
+}
+
+.top1 {
+  height: 77.5rpx;
+  width: 120rpx;
+  background-color: #F8EEBC;
+  border: 6rpx solid #000;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-bottom: 40rpx;
+  margin-top: 50rpx;
+}
+
+.top11 {
+  width: 47%;
+  height: 77.5rpx;
+  border-right: 6rpx solid #000;
+}
+
+.gongxiang {
+  display: flex;
+  background-color: #fff;
+}
+
+.gongxiang_top {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64rpx;
+  background-color: rgba(218, 216, 216, 0.533);
+  border-radius: 18rpx;
+  margin: 16rpx;
+}
+
+/* 2.我的订单/我的工具 */
+.user_content .user_main .orders_warp {
+  width: 90%;
+  padding: 10rpx;
+  margin-top: 40rpx;
+  margin-right: 2%;
+  margin-left: 2%;
+  padding-top: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  position: absolute;
+  z-index: 0;
+  /* border: 4rpx solid #e3f6ff; */
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #e3f6ff;
+}
+
+.user_content .user_main .orders_warp .orders_title {
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: 550;
+  display: flex;
+  flex-direction: row;
+}
+
+.studentNum {
+  font-size: 27rpx;
+  color: #888;
+  margin: auto;
+  margin-right: 10rpx;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt {
+  display: flex;
+  position: relative;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt .orders_navi {
+  padding: 10rpx;
+  flex: 1;
+  font-size: 28rpx;
+  text-align: center;
+  font-size: 25rpx;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt .orders_navi .iconfont {
+  color: #ed4450;
+  font-size: 40rpx;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt .orders_navi .order_name {
+  font-size: 28rpx;
+}
+
+/* line */
+.line {
+  margin: 5%;
+  border-bottom: 2rpx solid #888;
+}
+
+/* 公告 */
+.notice {
+  width: 96%;
+  padding-top: 20rpx;
+  margin: 2%;
+  height: 50rpx;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid #e3f6ff;
+}
+
+.notice_1 {
+  height: 50rpx;
+  width: 15%;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+.notice_2 {
+  height: 50rpx;
+  width: 81%;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ee {
+  display: flex;
+  align-items: center;
+}
+
+.addNew {
+  background-color: #f1fbff;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+  width: 100rpx;
+  text-align: center;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx rgba(94, 169, 238, 0.533);
+}
+
+/* 3.消息 */
+/* 导航 */
+.message {
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 92%;
+  margin-top: 375rpx;
+  margin-left: 4%;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  /* box-shadow: 2rpx 4rpx 4rpx 2rpx #888; */
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #e3f6ff;
+}
+
+.head1 {
+  width: 96%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 20rpx;
+  margin-left: 2rpx;
+  text-align: center;
+}
+
+.head_item1 {
+  width: 150rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  padding-bottom: 10rpx;
+  font-weight: 900;
+}
+
+.head_itemActive1 {
+  color: #0278AE;
+  border-bottom: 8rpx solid #a2dcf7;
+}
+
+/* 信息列表 */
+
+.Mbox {
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  border-bottom: 2rpx solid #c4eafc;
+}
+
+.messageList {
+  /* border-left: 40rpx solid #e3f6ff; */
+  border-left: 40rpx solid #c4eafc;
+}
+
+.Mtitle {
+  font-size: 30rpx;
+  font-weight: 800;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: -32rpx;
+}
+
+.Mtime {
+  font-size: 25rpx;
+  color: #888;
+  margin-top: 10rpx;
+  margin-left: -32rpx;
+}
+
+.Mtext {
+  color: rgb(85, 83, 83);
+  margin-top: 10rpx;
+  margin-left: -32rpx;
+  font-size: 28rpx;
+}
+
+.Mtouch {
+  text-align: end;
+  color: #888;
+  font-size: 22rpx;
+  margin-top: -30rpx;
+  margin-bottom: 10rpx;
+}
+
+.member_img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.nullmessage {
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+  color: #666666;
+}
+
+/* 蒙版弹窗 */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg {
+  width: 580rpx;
+  height: 450rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 85rpx;
+  background-color: #fff;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  color: #666666;
+  background-color: #f0fbff;
+  padding: 20rpx;
+  border: 1rpx solid #c1e5f1;
+  border-radius: 15rpx;
+  margin-top: 70rpx;
+}
+
+.recharge_amount {
+  color: #aaa;
+  width: 450rpx;
+  height: 80rpx;
+  background: #f1f1f1;
+  text-align: center;
+  border-radius: 12rpx;
+  margin-top: 56rpx;
+  text-indent: 0;
+}
+
+.button{
+  color: #fff;
+  width: 270rpx;
+  height: 80rpx;
+  background: rgb(71, 176, 236);
+  text-align: center;
+  border-radius: 12rpx;
+  margin-top: 50rpx;
+  text-indent: 0em;
+}
+
+.close_mask {
+  color: #fff;
+  padding: 10rpx;
+  margin-top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  position: relative;
+  left: 39%;
+  font-size: 45rpx;
+  background-color: #0278AE;
+  text-align: center;
+  line-height: 31rpx;
+}
+
+
+.mbox{
+  margin-top: 20rpx;
+  margin-left: -20rpx;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+.mbox1{
+  width: 100%;
+  padding-bottom: 10rpx;
+  border-bottom:2rpx dashed rgb(199, 235, 255);
+}
+
+.reduce{
+  width: 10%;
+  padding: 8rpx;
+  line-height: 20rpx;
+  background-color: #FE642E;
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: 800;
+  border-radius: 100%;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 30rpx;
+  height: 30rpx;
+}
+/*弹窗结束 */

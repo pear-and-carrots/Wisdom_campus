@@ -1,0 +1,18 @@
+<view class="">
+<navigator class="test" target="" url="../../pages/matter/matter">
+    <view class="test_img">
+        <text class="t-icon t-icon-jiaoshijieyong" >
+        </text>    
+    </view>    
+    <view class="test_name">
+       高等数学 
+    </view>
+    <view class="test_date">
+        04-03
+    </view>
+    <view class="test_wengj">
+        【问卷】
+    </view> 
+</navigator>
+</view>
+  

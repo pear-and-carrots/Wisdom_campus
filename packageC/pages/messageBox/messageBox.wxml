@@ -1,0 +1,28 @@
+<!-- 用户端 -->
+<block wx:if="{{guanli == 0}}">
+  <view class="messageBox">
+    <view class="box">
+      <textarea auto-focus bindinput="textarea" placeholder="请写下您宝贵的意见" class="textarea"></textarea>
+    </view>
+  </view>
+  <button bindtap="input" size="mini" style="color:#666666;background-color:rgb(241, 226, 193)">提交</button>
+</block>
+<!-- 管理端 -->
+<block wx:if="{{guanli == 1}}">
+  <view class="stuList" wx:for="{{xinxi}}" wx:key="index" data-id="{{item._id}}" bindtap="stuList">
+    <image src="../../../images/message.png" mode="widthFix"></image>
+    <view class="textareaText">{{item.data}}</view>
+  </view>
+</block>
+
+<!-- 轮播通知管理蒙版 -->
+<view class="modalDlg" wx:if="{{showModal1 == true}}">
+  <view class="buttonBox">
+    <view data-id="{{item._id}}" class="reduce" bindtap="removamessage">删除</view>
+    <view class='close_mask' bindtap="close_mask">x</view>
+  </view>
+  <view class="mbox" wx:for="{{xinxi}}">
+    <view class="mbox1" wx:if="{{id == item._id}}">{{item.data}}</view>
+  </view>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>

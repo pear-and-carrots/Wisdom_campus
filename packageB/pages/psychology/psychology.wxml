@@ -1,0 +1,97 @@
+<block wx:if="{{guanli==0}}">
+  <block>
+    <!-- <view class="gongxiang">
+      <view class="gongxiang_top" hover-class="payment_tops" wx:for="{{gongxiang}}" data-id="{{item.id}}"
+        bindtap="gongxiang">{{item.name}}</view>
+    </view> -->
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+    <!-- 3.商品详情 -->
+    <view class="leixing_">
+      <textarea name="textarea" placeholder="输入问题" value='{{form_info}}' bindblur="textarea"></textarea>
+    </view>
+    <view class="sign_button">
+      <button size="mini" class="sign_in" bindtap="fb" style="color:#fff" form-type="submit">提交</button>
+    </view>
+    <!--底部-->
+    <view class="btm_tool">
+      <view class="tool_item">
+        <view class="iconfont.icon-kefu"></view>
+        <view>联系客服</view>
+        <button class="kefu_button" open-type="contact"></button>
+      </view>
+      <navigator class="tool_item btn_buy" url="../../pages/psychology_telephone/psychology_telephone?id=0">
+        电话预约
+      </navigator>
+    </view>
+    </block>
+ <block wx:if="{{cutover[1].isActive}}">
+    <view>
+      <view class="list" wx:for="{{xinxi}}">
+        <view class="list_yuanyin" style="width:65%">
+          <view
+            style="font-weight:550;font-size:30rpx;color:#88;margin-bottom:20rpx;;margin-top:10rpx;margin-right:10rpx;margin-left:10rpx">
+            心理咨询</view>
+          <view style="font-size:28rpx;margin-top:20rpx;margin-bottom:10rpx;margin-right:10rpx;margin-left:10rpx">
+            {{item.classrooms}}</view>
+        </view>
+        <view style="width:40%;">
+          <view class="list_time">{{item.time}}</view>
+          <view wx:if="{{item.answer==[]}}">
+            <view class="list_zhuangtai1">预约中</view>
+          </view>
+
+          <view wx:if="{{item.answer!=[]}}">
+            <view class="head_item {{item.shenpi?'list_zhuangtai':'list_zhuangtai2'}}">{{item.shenpi?"预约成功":"预约失败"}}
+            </view>
+          </view>
+          <!-- <view wx:if="{{item.answer}}" class="answer" style="color:#666666">来电时间： {{item.answer}}</view> -->
+        </view>
+      </view>
+    </view>
+ </block>
+ <block wx:if="{{cutover[2].isActive}}">
+    <view>
+      <navigator class="list" wx:for="{{zixun}}"
+        url="../../pages/psychology_telephone/psychology_telephone?id=3&ids={{item._id}}">
+        <view class="list_yuanyin">
+          <view class="timeBox">
+            <view style="font-weight:550;font-size:30rpx;color:#88;margin:10rpx;width:40%">问题咨询</view>
+            <view class="list_time" style="margin-left: 190rpx; width:60%">{{item.time}}</view>
+          </view>
+          <view
+            style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;font-size:28rpx;margin:10rpx;color#666666">
+            {{item.textarea}}</view>
+        </view>
+        <view class="{{item.answer==[]?'dafu1':'dafu2'}}">
+          {{item.answer==""?"未答复":"已答复"}}
+        </view>
+      </navigator>
+    </view>
+ </block>
+  </block>
+</block>
+<block wx:if="{{guanli==1}}">
+<cutover cutover="{{cutover1}}" bindtabsIemChange="handleTtabsIemChange1"></cutover>
+ <block wx:if="{{cutover1[0].isActive}}">
+    <navigator wx:for="{{zixun}}" class="jieida"
+      url="../../pages/psychology_telephone/psychology_telephone?id=1&ids={{item._id}}">
+      <view class="type">类别：{{item.classrooms}}
+        <view class="{{item.answer==[]?'dafu1':'dafu2'}}" style="width:90rpx;margin-top:-10rpx;margin-left:340rpx">{{item.answer?"已解答":"未解答"}}</view>
+      </view>
+      <view style="color: #666666">咨询问题：{{item.textarea}}</view>
+      <view class="time">时间：{{item.time}}</view>
+    </navigator>
+</block>
+ <block wx:if="{{cutover1[1].isActive}}">
+    <navigator class="jieida" wx:for="{{xinxi}}"
+      url="../../pages/psychology_telephone/psychology_telephone?id=2&ids={{item._id}}">
+      <view class="type">申请类别： {{item.classrooms}}
+        <view class="{{item.answer==[]?'dafu1':'dafu2'}}" style="width:90rpx;margin-top:-10rpx;margin-left:280rpx">{{item.answer==""?"未审批":"已审批"}}</view>
+      </view>
+      <view class="time">申请时间： {{item.time}}</view>
+      
+    </navigator>
+  </block></block>
+   
+

@@ -1,0 +1,66 @@
+<view class="head" wx:if="{{guanli == 1}}">
+  <view class="head_item {{dex == index?'head_itemActive':''}}" wx:for="{{array}}" data-dex="{{index}}"
+    bindtap="selected">{{item}}</view>
+</view>
+
+<block wx:if="{{guanli == 1}}">
+<view class="Box" wx:if="{{dex == 0}}">
+  <view class="title">发布考勤打卡</view>
+  <!-- 设置标题 -->
+  <view><text class="textTitle">设置考勤标题：</text><input class="input" placeholder="输入标题" bindinput="bindinput"/></view>
+  <!-- 设置打卡时间范围 -->
+  <view><text class="textTitle">设置时间范围：</text>
+    <picker class="picker" mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1"
+      bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+      <view class="tui-picker-detail">
+        开始时间:
+        {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}
+        {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+      </view>
+    </picker>
+    <picker class="picker" mode="multiSelector" value="{{dateTime2}}" bindchange="changeDateTime2"
+      bindcolumnchange="changeDateTimeColumn2" range="{{dateTimeArray2}}">
+      <view class="tui-picker-detail">
+        终止时间:
+        {{dateTimeArray2[0][dateTime2[0]]}}-{{dateTimeArray2[1][dateTime2[1]]}}-{{dateTimeArray2[2][dateTime2[2]]}}
+        {{dateTimeArray2[3][dateTime2[3]]}}:{{dateTimeArray2[4][dateTime2[4]]}}
+      </view>
+    </picker>
+  </view>
+  <!-- 设置打卡方式 -->
+  <view>
+    <text class="textTitle" >设置打卡方式：</text><picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array1}}">打卡方式：{{array[index]}}</picker>
+  </view>
+
+  <button class="button" bindtap="button">提交</button>
+</view>
+</block>
+
+<view wx:if="{{dex == 1}}">
+  <!-- 打卡列表 -->
+  <view wx:if="{{show == false}}" class="list1" bindtap="checkingInList" wx:for="{{message}}" wx:key="index"
+    data-_id="{{item._id}}" data-index="{{index}}">
+    <image class="list_img" src="{{item.avatarUrl}}"></image>
+    <view class="list_techer">
+      <view class="list_name">{{item.teacher}}发布的{{item.title}}</view>
+      <view class="list_time">开始时间：<text style="color:green">{{item.startTime}}</text></view>
+      <view class="list_time">结束时间：<text style="color:red">{{item.endTime}}</text></view>
+    </view>
+    <view class="list_zhuangtai">未签到</view>
+  </view>
+
+    <!-- 4.打卡详情 -->
+    <view wx:if="{{show == true}}">
+    <image class="fabu1" src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/返回.png"
+      bindtap="fabu1"></image>
+    <view wx:for="{{checkingList}}" wx:key="index" class="list1">
+      <image src="{{item.avatarUrl}}" class="list_img"></image>
+      <view>
+        <view class="list_name">{{item.stuName}}</view>
+        <view class="list_time">打卡时间： {{item.currentTime}}</view>
+      </view>
+    </view>
+
+    <view wx:if="{{checkingList.length == 0}}" class="null">暂无人打卡</view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange"></cutover>
+ <block wx:if="{{cutover[0].isActive&& id == 0}}">
+  <!-- 添加 -->
+  <block wx:if="{{guanli == 1 || guanli == 0}}">
+    <block wx:if="{{guanli==1}}">
+      <view class="search">
+        <input type="text" placeholder="输入信息发布的时间，如2020-05" bindblur="searchInput"></input>
+      </view>
+    </block>
+
+    <view class="fabu" wx:if="{{guanli == 1 || guanli == 0}}" bindtap="fabu">+</view>
+  </block>
+  <view class="shiwu" wx:for="{{xinxi}}" wx:for-item="item1" wx:for-index="index1" wx:key="{{item._id}}"
+    data-ids="{{item1._id}}" bindlongtap="shangchu">
+    <view class="shiwu_detail">
+      <view class="shiwu_avatarUrl">
+        <image class="shiwu_img" src="{{item1.avatarUrl}}" mode="widthFix" />
+      </view>
+      <view style="width:100%;margin-bottom:20rpx">
+        <view class="bb">
+          <view class="shiwu_nickName" style="font-weight:550">{{item1.nickName}}</view>
+          <view class="shiwu_date">{{item1.time}}</view>
+        </view>
+        <view style="font-size:28rpx">{{item1.textarea}}</view>
+      </view>
+
+    </view>
+    <image class="shiwu_img2" wx:for="{{item1.src}}" wx:for-item="item2" wx:for-index="index2" src="{{item2}}"
+      mode="widthFix" />
+  </view></block>
+ <block wx:if="{{cutover[1].isActive}}">
+   <view class="shiwu" wx:for="{{xinxi}}" bindlongtap="shangchu" wx:if="{{openid == item1._openid}}" wx:for-item="item1"
+    wx:for-index="index1" wx:key="{{item._id}}">
+    <view class="shiwu_detail">
+      <view class="shiwu_avatarUrl">
+        <image class="shiwu_img" src="{{item1.avatarUrl}}" mode="widthFix" />
+      </view>
+      <view style="width:100%;margin-bottom:20rpx">
+        <view class="bb">
+          <view class="shiwu_nickName" style="font-weight:550">{{item1.nickName}}</view>
+          <view class="shiwu_date">{{item1.time}}</view>
+        </view>
+        <view style="font-size:28rpx">{{item1.textarea}}</view>
+      </view>
+
+    </view>
+    <image class="shiwu_img2" wx:for="{{item1.src}}" wx:for-item="item2" wx:for-index="index2" src="{{item2}}"
+      mode="widthFix" />
+  </view></block>
+   
+<!-- 3.分享 -->
+<block wx:if="{{id == 1 }}">
+  <image class="fabu1" src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/返回.png"
+    bindtap="fabu1"></image>
+  <view class="findLost">
+    <publish cloud="{{cloud}}" placeholder="{{placeholder}}" stuClass="{{stuClass}}" bind:callParent="parentFunction">
+    </publish>
+  </view>
+</block>

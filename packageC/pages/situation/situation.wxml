@@ -1,0 +1,34 @@
+<swiper class="swiper-block" circular previous-margin="250rpx" next-margin="250rpx" current="0"
+  bindchange="swiperChange">
+  <block wx:for="{{imgUrls}}" wx:index="{{index}}">
+    <swiper-item class="swiper-item">
+      <image mode="aspectFill" src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+      <view class="slide-detail {{swiperIndex == index ? 'active1' : ''}}">{{name[index]}}</view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="head">
+  <view class="head_item {{dex == index?'head_itemActive':''}}" wx:for="{{array}}" data-dex="{{index}}"
+    bindtap="selected">{{item}}</view>
+</view>
+
+<view wx:if="{{dex == 0}}">
+  <view class="text">
+   <rich-text class="" nodes="{{xinxi.notice}}">
+     
+   </rich-text>
+     
+  </view>
+</view>
+<view class="item1" wx:if="{{dex == 1}}">
+  <image src="https://www.gdou.edu.cn/__local/B/24/09/5E50342302DF7B4CE093E985DB0_64524FA2_17ACFE.bmp"></image>
+</view>
+<view wx:if="{{dex == 2}}">
+  <swiper bindchange="swiperChang" class="item1" autoplay current="0" interval="3000" duration="500" circular>
+    <swiper-item wx:for="{{img.length}}">
+      <image class="swImg" src="{{img[current]}}"></image>
+      <view class="name">{{spaceName[current]}}</view>
+    </swiper-item>
+  </swiper>
+</view>

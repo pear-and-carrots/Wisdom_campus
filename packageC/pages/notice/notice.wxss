@@ -1,0 +1,106 @@
+.biaoti {
+  width: 100%;
+  padding: 3%;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  position: fixed;
+  background-color: #f1fbff;
+  margin-bottom: 20rpx;
+}
+
+.tiaozuang {
+  margin-left: -12%;
+  margin-top: 20rpx;
+}
+page {
+  padding: 2%;
+  width: 96%;
+}
+.list {
+  margin-top: 140rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.item {
+  padding-bottom: 18rpx;
+  border-bottom: 1rpx solid #cccc;
+display: flex;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: 550;
+  color: #1a1a1a;
+  margin-bottom: 18rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.item-wrapper {
+  display: flex;
+}
+
+.img image {
+  width: 210rpx;
+  height: 140rpx;
+}
+
+.info {
+  color: #777;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  height: 70rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.read-num {
+  display: flex;
+  font-size: 24rpx;
+  color: #4d4d4d;
+  margin-left: 227rpx;
+  padding-top: 116rpx;
+}
+
+.date {
+  display: flex;
+  font-size: 24rpx;
+  color: #888;
+
+}
+.date1{
+  margin-top: 116rpx;
+}
+.read-num text {
+  color: #4d4d4d;
+  margin-right: 4rpx;
+
+}
+
+.wl {
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+
+.xc {
+  margin: 2%;
+  border-radius: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  font-size: 28rpx;
+}

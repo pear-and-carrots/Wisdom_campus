@@ -1,0 +1,30 @@
+<view class="biaoti">
+  <view class="tiaozuang" bindtap="tiaozuang">
+    <image src="../../../images/fanhui.png" style="width:60rpx;height:60rpx" mode="heightFix"></image>
+  </view>
+  <view style="font-size: 28rpx;width:87%;text-align:left;margin-bottom:15rpx"> {{type}}</view>
+</view>
+<block wx:if="{{guanli!=1}}">
+  <view class="item" wx:key="index" wx:for="{{xinxi}}" wx:key="_id">
+    <navigator url="../detail/detail?id={{item._id}}&type={{type}}">
+      <view class="title">{{item.title}}</view>
+      <view class="item-wrapper">
+        <view class="img">
+          <image src="../../../images/xuexiao1.png"></image>
+        </view>
+        <view class="info">
+          {{item.textarea}}
+        </view>
+      </view>
+      <text class="date"> {{item.date}} </text>
+      <view class="read-num"><text>{{item.frequency}}</text>次阅读</view>
+    </navigator>
+  </view>
+</block>
+<block wx:if="{{guanli == 1}}">
+  <view class="title1">发布内容</view>
+  <input placeholder="请输入标题" class="glinput" value="{{form_info}}" name="class" bindinput="neueo"></input>
+  <input placeholder="请输入班级" class="glinput" value="{{form_info}}" name="class" bindinput="neueo1"></input>
+  <publish class='publish' cloud="{{cloud}}" placeholder="{{placeholder}}" stuClass="{{stuClass}}"
+    bind:callParent="parentFunction"></publish>
+</block>

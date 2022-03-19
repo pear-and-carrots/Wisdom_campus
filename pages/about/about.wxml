@@ -1,0 +1,117 @@
+<!-- 1.个人信息 -->
+<view class="my_message">
+  <view class="my_message_top">
+    <view class="user_img">
+      <!-- <open-data type="userAvatarUrl"></open-data> -->
+      <image src="../../images/work1.png" wx:if="{{avatarUrl == ''}}" mode="widthFix"></image>
+      <image src="{{avatarUrl}}" class="denglu" wx:if="{{avatarUrl != ''}}" mode="widthFix"></image>
+    </view>
+    <view class="user_name">
+      <!-- <open-data type="userNickName"></open-data> -->
+      <text bindtap="getUserInfo" wx:if="{{nickName == ''}}">点击登录</text>
+      <text style="font-weight:800" wx:if="{{nickName != ''}}">{{nickName}}</text>
+      <view class="name">
+        <image src="../../images/qianming.png" style="width:50rpx;height:50rpx">
+        </image>
+        <input placeholder="个性签名" wx:if="{{input == ''}}" bindblur="input" bindfocus="input" bindtap="input"
+          confirm-type="done" />
+        <view style="font-weight:700" bindtap="inputt">{{input}}</view>
+      </view>
+    </view>
+
+    <image bindtap="seting"
+      src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/about/seting.png"
+      style="width:90rpx;height:90rpx;margin-top:-100rpx"></image>
+
+  </view>
+</view>
+
+<!-- 2.天气预报 -->
+<image class="weather"
+  wx:if="{{weatherData.weather.data == '阴' || weatherData.weather.data == '多云'|| weatherData.weather.data == '晴间多云'}}"
+  mode="widthFix" src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/阴天.png"></image>
+<image class="weather"
+  wx:if="{{weatherData.weather.data == '小雨' || weatherData.weather.data == '中雨' || weatherData.weather.data == '大雨'|| weatherData.weather.data == '雷阵雨'|| weatherData.weather.data == '阵雨' || weatherData.weather.data == '暴雨'}}"
+  mode="widthFix" src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/雨天.png"></image>
+<image class="weather"
+  wx:if="{{weatherData.weather.data == '晴'|| weatherData.weather.data == '少云'|| weatherData.weather.data == '微风'}}"
+  mode="widthFix" src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/晴天.png"></image>
+<view class="weatherBox">
+  <view class="Wbox1">
+    <view class="c1">{{weatherData.city.data}}</view>
+    <view class="c2">{{weatherData.temperature.data}}℃</view>
+    <view class="c3">{{weatherData.winddirection.data}} {{weatherData.windpower.data}}</view>
+    <view class="c3">{{weatherData.humidity.text}} {{weatherData.humidity.data}}</view>
+    <view class="c4">{{weatherData.weather.data}}</view>
+  </view>
+  <view class="Wbox2">
+    <view class="box1">
+      <view class="box11">{{weather.daily[0].name}} {{weather.daily[0].level}}</view>
+      <view class="box12">{{weather.daily[0].text}}</view>
+    </view>
+    <view class="box2">
+      <view class="box21">{{weather.daily[1].name}} {{weather.daily[1].level}}</view>
+      <view class="box22">{{weather.daily[1].text}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 3.我的工具 -->
+<view class="user_content" style="margin-right: 4%;margin-left: 4%;"wx:if="{{guanli!=10}}"> 
+  <view class="orders_title">我的工具</view>
+  <view class="user_main">
+    <view class="orders_warp" wx:if="{{guanli!== -1&&guanli!==3}}">
+      <view class="orders_contrnt">
+        <navigator class="orders_navi" url="../../packageB/pages/timetable/timetable">
+          <text class="t-icon t-icon--teaching"></text>
+          <view class="title">课程表</view>
+        </navigator>
+        <navigator class="orders_navi" url="../../packageB/pages/leave/leave">
+          <text class="t-icon t-icon--timetable"></text>
+          <view class="title">请假</view>
+        </navigator>
+        <navigator class="orders_navi" url="../../packageB/pages/payment/payment">
+          <text class="t-icon t-icon--education-"></text>
+          <view class="title">校园缴费</view>
+        </navigator>
+        <navigator class="orders_navi" url="../../packageB/pages/achievement/achievement">
+          <text class="t-icon t-icon--exam"></text>
+          <view class="title">我的成绩</view>
+        </navigator>
+      </view>
+      <view class="orders_contrnt">
+        <navigator class="orders_navi" url="../../packageB/pages/empty_classroom/empty_classroom">
+          <text class="t-icon t-icon--whiteboard"></text>
+          <view class="title">空教室</view>
+        </navigator>
+        <navigator class="orders_navi" url="../../packageB/pages/psychology/psychology">
+          <text class="t-icon t-icon--mental"></text>
+          <view class="title">心理咨询</view>
+        </navigator>
+        <navigator class="orders_navi" url="../../packageB/pages/find/find">
+          <text class="t-icon t-icon--students-pack"></text>
+          <view class="title">失物招领</view>
+        </navigator>
+        <navigator class="orders_navi" url="../../packageB/pages/postgraduate/postgraduate">
+          <text class="t-icon t-icon--study-"></text>
+          <view class="title">考研墙</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 4.退出登录 -->
+<!-- <text wx:if="{{nickName != ''}}" class="end" bindtap="end">退出登录</text> -->
+
+<!-- 5.退出登录蒙版 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <text class="close" bindtap="close">X</text>
+  <text class="title">提示</text>
+  <text class="title2">确认退出登录吗？</text>
+  <button class='reject' bindtap="remove" size="mini"> 确定 </button>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+<view class="iconfont.icon-fenxiang"></view>

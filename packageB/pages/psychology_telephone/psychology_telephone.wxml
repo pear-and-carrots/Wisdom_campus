@@ -1,0 +1,81 @@
+<block wx:if="{{id==0}}">
+  <form bindsubmit="formSubmit" class="form">
+    <view class="xinxi">
+      <text decode="{{true}}" space="{{true}}">姓名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text><input class="bk"
+        name="name" value="{{form}}" type="text">
+      </input>
+    </view>
+    <view class="xinxi">
+      <text decode="{{true}}" space="{{true}}">班级：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text><input class="bk"
+        name="class" value="{{form}}" type="text">
+      </input>
+    </view>
+    <view class="xinxi">
+      <text decode="{{true}}" space="{{true}}">学号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text><input class="bk"
+        name="studentID" value="{{form}}" type="text">
+      </input>
+    </view>
+    <view class="xinxi">
+      手机号码：<input class="bk" name="sjhaoma" value="{{form}}" type="text">
+      </input>
+    </view>
+    <view class="xinxi">
+      咨询问题：<picker class="pricer" range="{{classroomList}}" bindchange="prckerList" value="{{index}}">
+        {{classroomList[index]}}</picker>
+    </view>
+
+    <view class="xinxi">
+      性别： <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}" wx:key="name">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}} </label></radio-group>
+    </view>
+    <button class='btn' form-type="submit">提交</button>
+  </form>
+</block>
+
+<block wx:if="{{id==1}}">
+  <view class="box">
+    <view class="jieda_tap">问题解答</view>
+    <view class="question">问题：{{xinxi.textarea}}</view>
+    <view class="question">提问时间： {{xinxi.time}}</view>
+<block wx:if="{{xinxi.answer==[]}}">
+      <textarea class="textarea" value="{{value}}" placeholder="输入解答问题" bindblur="daan"></textarea>
+    <button bindtap="jieda">解答</button>
+</block>
+  <block wx:if="{{xinxi.answer}}">
+    <view class="question">
+      解答内容:{{xinxi.answer}}
+    </view>
+      
+  </block>
+    
+  </view>
+</block>
+
+<block wx:if="{{id==2}}">
+  <view class="box">
+    <view class="question">班级： {{xinxi.class}}</view>
+    <view class="question">姓名： {{xinxi.name}}</view>
+    <view class="question">预约类型：{{xinxi.classrooms}}</view>
+    <view class="question">预约时间：{{xinxi.time}}</view>
+    <block wx:if="{{xinxi.answer==[]}}">
+   <textarea class="textarea" value="{{value}}" placeholder="输入拨打电话时间或驳回理由" bindblur="daan"></textarea>
+    <button bindtap="toguo">审核通过</button>
+    <button class="default" bindtap="bohui">驳回审批</button>
+    </block>
+      <block wx:if="{{xinxi.answer!=[]}}">
+        <view class="question">审批结果： {{xinxi.answer}}</view>
+      </block>
+  </view>
+</block>
+<block wx:if="{{id==3}}">
+  <view class="box">
+    <view class="jieda_tap">问题解答</view>
+    <view class="question">问题：{{xinxi.textarea}}</view>
+    <view class="question">提问时间： {{xinxi.time}}</view>
+    <view class="question" wx:if="{{xinxi.answer}}">
+      解答内容：{{xinxi.answer}}
+    </view>
+      
+  </view>
+</block>

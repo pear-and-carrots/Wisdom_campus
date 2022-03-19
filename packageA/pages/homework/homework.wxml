@@ -1,0 +1,47 @@
+<block wx:if="{{guanli!=1}}">
+  <!-- 1.顶部导航 -->
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange1"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+     <view class="homework" data-id="{{item._id}}" wx:key="_id" bindtap="tiaozuang" wx:for="{{homework}}">
+      <view class="homeworkInfo1">
+        <image class="teacherImg" src="{{item.teacherImg}}" />
+      </view>
+      <view class="homeworkInfo2">
+        <view class="homework_name">{{item.teacher}}</view>
+        <view class="homework_neiro">{{item.content}}</view>
+      </view>
+      <view class="hTime">{{item.time}}</view>
+    </view></block>
+ <block wx:if="{{cutover[1].isActive}}">
+     <view class="homework" data-id="{{item._id}}" wx:key="_id" bindtap="tiaozuang1" wx:for="{{zuoye}}">
+      <view class="homeworkInfo1">
+        <image class="teacherImg" src="{{item.teacherImg}}" />
+      </view>
+      <view class="homeworkInfo2">
+        <view class="homework_name">{{item.teacher}}</view>
+        <view class="homework_neiro">{{item.content}}</view>
+      </view>
+      <view class="hTime">{{item.time}}</view>
+    </view>
+  </block></block>
+   
+<!-- 管理端 -->
+<block wx:if="{{guanli==1}}">
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange1"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+     <view class="box">
+      <view>学生班级：<input class="glinput" name="class" bindinput="neueo"></input></view>
+      <view>课程名称：<input class="glinput" name="content" bindinput="neueo1"></input></view>
+      <view>作业次数：<input class="glinput" name="homework" bindinput="neueo2"></input></view>
+      <view>可作答时间：<input class="glinput" name="time" bindinput="neueo3" placeholder="输入作答的天数" type="number"></input>
+      </view>
+    </view>
+    <publish class='publish' cloud="{{cloud}}" placeholder="{{placeholder}}" stuClass="{{stuClass}}"
+      bind:callParent="parentFunction"></publish></block>
+ <block wx:if="{{cutover[1].isActive}}">
+     <navigator wx:for="{{xinxi}}" class="list"
+      url="../MyHomework/MyHomework?ids=2&id={{item._id}}&class={{item.class}}">
+      <view class="course">{{item.course}} {{item.homework}}</view>
+      <view class="class">{{item.class}}</view>
+    </navigator>
+  </block></block>

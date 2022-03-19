@@ -1,0 +1,62 @@
+<!-- 标题 -->
+<view class="detial">
+  {{detail.title}}
+  <view class="progress_text">时间：{{timeStr}}</view>
+</view>
+
+<!-- 题目 -->
+<view class='container'>
+  <swiper class='sheet' current='{{id}}'>
+    <block wx:for="{{qnaire}}" wx:for-item="i" wx:key="index" wx:for-index="key" data-item='{{i}}'>
+      <swiper-item>
+        <form bindsubmit='submit'>
+          <view class='naire'>
+            <!-- 题目 -->
+            <view class='question'>{{id+1}} . {{qnaire[id].key.question}}<text
+                style="color:#888">({{qnaire[id].key.type}} )</text> <text
+                style="color:red;font-size:28rpx;margin-left:100rpx">{{qnaire[id].key.score}}分</text> </view>
+
+            <view class="line"></view>
+
+            <!-- 1.多选题 -->
+            <checkbox-group class='radio-group' name='answer' bindchange="checkboxChange">
+              <label wx:if="{{i.key.type == '多选题'}}" wx:for="{{i.key.conLists}}" wx:key="index1" class='radio'>
+                <checkbox value="{{zimu[index]}}" color='#fcbe39' />{{zimu[index]}} . {{item.del}}
+              </label>
+            </checkbox-group>
+
+            <radio-group class='radio-group' name='answer' bindchange="checkboxChange">
+
+              <!-- 2.单选题 -->
+              <label wx:if="{{i.key.type == '单选题'}}" wx:for="{{i.key.conLists}}" wx:key="index1" class='radio'>
+                <checkbox value="{{zimu[index]}}" color='#fcbe39' />{{zimu[index]}} . {{item.del}}
+              </label>
+
+              <!-- 3.判断题 -->
+              <label wx:if="{{i.key.type == '判断题'}}" wx:for="{{i.key.conLists}}" wx:key="index1" class="radio">
+                <radio value="{{zimu1[index]}}" color='#fcbe39' />{{zimu1[index]}} . {{item.del}}
+              </label>
+
+            </radio-group>
+
+            <!-- 4.填空题 -->
+            <textarea name="answer" cols="30" rows="10" wx:if="{{i.key.type == '填空题'}}" wx:key="index1" class="textarea"
+              bindinput="bindin">{{i.completion}}</textarea>
+
+          </view>
+          <view class='button-group'>
+            <button class='button' hover-class='none' bindtap='lastq' disabled='{{id==0}}'>上一题</button>
+            <button wx:if="{{id<qnaire.length-1}}" class='button' hover-class='none' form-type='submit'
+              bindtap='nextq'>下一题</button>
+            <button style="background-color:green;color:#fff" wx:else class='button' hover-class='none' form-type='submit' bindtap='formSubmit'>提交</button>
+          </view>
+          <view class='id'>{{id+1}}/{{qnaire.length}}</view>
+        </form>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="area">
+  <view class="area_cell" wx:for="{{qnaire}}" bindtap="area" value="{{id}}" data-dex="{{index}}">{{index+1}}</view>
+</view>

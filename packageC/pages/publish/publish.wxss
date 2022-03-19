@@ -1,0 +1,83 @@
+@import "./../../../utils/iconfont.wxss";
+
+
+.pricer{
+  color: #666666;
+  background-color: #fff;
+  padding: 20rpx;
+    box-shadow: 2rpx 5rpx 5rpx 4rpx #d2f0fc;
+    /* border: 1rpx solid #c1e5f1; */
+  border-radius: 15rpx;
+}
+
+.input{
+  color: #666666;
+  background-color: #fff;
+  padding: 20rpx;
+    box-shadow: 2rpx 5rpx 5rpx 4rpx #d2f0fc;
+    /* border: 1rpx solid #c1e5f1; */
+  border-radius: 15rpx;
+  margin: 2%;
+}
+
+/* 富文本样式 */
+.editor{
+  width: 96%;
+  margin: 2%;
+  border-radius: 15rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #d2f0fc;
+  padding-bottom: 40rpx;
+}
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  z-index: 99;
+}
+.ql-active {
+  color: #22C704;
+}
+
+.iconfont {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width:30px;
+  height: 30rpx;
+}
+
+.contaner {
+  width: 100%;
+}
+.ql-container {
+  box-sizing: border-box;
+  width: 100%;
+  height:auto;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: auto;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #ECECEC;
+}
+.submit {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: red;
+  position: fixed;
+  bottom: 74rpx;
+  right: 35rpx;
+  text-align: center;
+  border-radius: 50%;
+}

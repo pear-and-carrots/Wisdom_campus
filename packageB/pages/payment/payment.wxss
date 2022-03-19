@@ -1,0 +1,101 @@
+.bangding {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 72rpx;
+    margin: 2%;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+    border-radius: 10rpx;
+}
+
+.bangding_left {
+    display: flex;
+    left: 0;
+    position: absolute;
+    padding-left: 10rpx;
+    margin-left: 20rpx;
+}
+
+.bangding_right {
+    display: flex;
+    right: 0;
+    position: absolute;
+    padding-right: 10rpx;
+    color: rgb(42, 42, 43);
+    margin-right: 20rpx;
+}
+
+.congzhi {
+    padding: 20rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+    margin: 2%;
+}
+
+.congzhi_jinge {
+    padding-bottom: 20rpx;
+    padding-left: 20rpx;
+    border-bottom: 2rpx solid #8888;
+    margin-bottom: 20rpx;
+}
+
+.feiyong {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feiyong_a {
+    background-color: red;
+    display: flex;
+    width: 29%;
+    align-items: center;
+    justify-content: center;
+    margin: 12rpx;
+    height: 64rpx;
+    border-radius: 40rpx;
+    background-color: rgb(242, 253, 253);
+    margin-bottom: 20rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+}
+
+.feiyong_aActive {
+    background-color: rgb(169, 207, 160);
+}
+
+.button {
+    color: #fff;
+    background-color: #0278ae;
+    margin-top: 100rpx;
+}
+
+.feiyong_b {
+    background-color: red;
+    display: flex;
+    width: 29%;
+    align-items: center;
+    justify-content: center;
+    margin: 12rpx;
+    height: 64rpx;
+    border-radius: 40rpx;
+    background-color: rgb(238, 240, 253);
+    margin-bottom: 20rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+}
+
+.feiyong_bActive {
+    background-color: rgb(176, 182, 221);
+}
+
+.jiaona {
+    display: flex;
+    color: red;
+    font-size: 40rpx;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 40rpx;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+}

@@ -1,0 +1,35 @@
+<!-- 用户端修改自己作业 -->
+<block wx:if="{{guanli!=1}}">
+    <view class="page">
+        <view class="homework">
+            <view class='course'>
+                {{xinxi.course}}
+            </view>
+            <view class="content">
+                作业要求：{{xinxi.content}}
+            </view>
+        </view>
+        <view class="Hbox">
+            <view class='zuoye'>我的作业详情</view>
+            <view class="WyHomweorkBox"><text class="WyHomweork" space="ensp">{{zuoye[0].textarea}}</text></view>
+            <view wx:for="{{zuoye[0].src}}" class="WyHomweorkimg">
+                <image class="WyHomweorkImg" src="{{item}}" mode="widthFix" />
+            </view>
+        </view>
+        <view>评分：{{zuoye[0].fengshu}}</view>
+           <view>评语：{{zuoye[0].fengshu1}}</view>
+    </view>
+   <block wx:if="{{zuoye[0].fengshu==[]}}">
+         <button class="button" size="mini" bindtap="xiugai" wx:if="{{date<=xinxi.date}}">修改答案</button>
+   </block>
+     
+</block>
+
+<!-- 管理端查看完成作业情况 -->
+<block wx:if="{{guanli==1}}">
+    <navigator class="notComplete" wx:for="{{classs}}" url="../homework_upload/homework_upload?id={{id}}&&name={{item.name}}" >
+        <image class="notComplete_img" src="{{item.avatarUrl}}" />
+        <view>{{item.name}}</view>
+    </navigator>
+</block>
+  

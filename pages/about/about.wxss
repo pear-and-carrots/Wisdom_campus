@@ -1,0 +1,346 @@
+page {
+  background-color: #F7F7FA;
+}
+
+.my_message {
+  width: 96%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  /* background-color: #fff; */
+}
+
+.my_message_top {
+  width: 100%;
+  height: 210rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.user_name {
+  font-size: 32rpx;
+}
+
+.user_name text{
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+
+.user_img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100rpx;
+  overflow: hidden;
+  margin-left: 15px;
+}
+
+.denglu {
+  height: 100%;
+  width: 100%;
+}
+
+.user_name{
+  width: 55%;
+}
+
+.name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: flex-start;
+  margin-top: 30rpx;
+  margin-left: -15rpx;
+  /* position: relative; */
+}
+
+.dh {
+  width: 96%;
+  /* height: 130rpx; */
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #8888;
+}
+
+.dh_1 {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 38rpx;
+}
+
+.goods {
+  width: 25%;
+  display: flex;
+  padding: 15rpx;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 0rpx 0rpx 0rpx #8888;
+}
+
+.title {
+  font-size: 25rpx;
+  font-weight: 500;
+}
+
+/* 天气 */
+.weather{
+  margin-top: 60rpx;
+  /* margin-left: -45rpx; */
+  width: 105%;
+  z-index: -1;
+  position: absolute;
+}
+
+.weatherBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 4%;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  /* border: 1rpx solid #8888; */
+  opacity: 0.8;
+}
+
+.Wbox1{
+  width: 30%;
+  align-items: center;
+  text-align: center;
+  padding-top: 15rpx;
+}
+
+.c1{
+  font-size: 20rpx;
+}
+
+.c2{
+  font-size: 70rpx;
+  font-weight: 700;
+  color: #0066ff;
+}
+
+.c3{
+  font-size: 22rpx;
+  margin-bottom: 2rpx;
+}
+
+.c4{
+  font-size: 22rpx;
+}
+
+.Wbox2{
+  width: 70%;
+}
+
+.box1{
+  background-color: #e0e9f7;
+  padding: 15rpx;
+  margin-bottom: 20rpx;
+  border-radius: 15rpx;
+}
+
+.box11{
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #213f6b;
+}
+
+.box12{
+  font-size: 22rpx;
+}
+
+.box2{
+  background-color: #eff8f0;
+  padding: 15rpx;
+  border-radius: 15rpx;
+}
+
+.box21{
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #043d21;
+}
+
+.box22{
+  font-size: 22rpx;
+}
+/* 2.分类 */
+.product-type {
+  background: #fff;
+  padding-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 25%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.item image {
+  width: 74rpx;
+  height: 74rpx;
+} 
+
+/* 2.我的订单/我的工具 */
+.user_content {
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid rgba(193, 223, 252, 0.533);
+}
+
+.orders_title{
+  width: 5%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: #0278AE;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.user_main{
+  width: 95%;
+  padding: 10rpx;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt {
+  display: flex;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt .orders_navi {
+  padding: 10rpx;
+  flex: 1;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt .orders_navi .iconfont {
+  color: rgb(100, 159, 237);
+  font-size: 40rpx;
+}
+
+.user_content .user_main .orders_warp .orders_contrnt .orders_navi .order_name {
+  font-size: 28rpx;
+}
+
+/* 4.退出登录 */
+.end {
+  background-color: rgb(230, 54, 54);
+  color: #fff;
+  font-weight: 550;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  margin-top: 50%;
+}
+
+/* 5.退出登录蒙版 */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg {
+  width: 580rpx;
+  height: 500rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 85rpx;
+  background-color: #fff;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.modalDlg text {
+  margin: auto;
+  font-size: 32rpx;
+}
+
+.modalDlg .title {
+  margin: auto;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #213f6b;
+}
+
+.modalDlg .close {
+  text-align: center;
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 50%;
+  background-color: #213f6b;
+  color: #fff;
+}
+
+.modalDlg .title2 {
+  margin: auto;
+  padding: 40rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #213f6b;
+}
+
+.reject {
+  color: #fff;
+  /* width: 80rpx;
+  height: 80rpx; */
+  line-height: 50rpx;
+  background: #cf2f07;
+  text-align: center;
+  border-radius: 12rpx;
+  margin-top: 60rpx;
+  margin-bottom: 20rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  font-size: 32rpx;
+  text-indent: 0em;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "kcb": "plugin://kcb-plugin/kcb-component"
+  },
+  "navigationBarTitleText": "课程表"
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "brithday":"../../../components/brithday/brithday"
+  },
+  "navigationBarTitleText": "个人中心"
+}

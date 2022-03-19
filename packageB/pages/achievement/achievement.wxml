@@ -1,0 +1,98 @@
+<!-- 用户端 -->
+<block wx:if="{{guanli==0}}">
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+        <view class="search-box">
+            <view class="bx">
+                <picker class="pricer" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                    <!-- 题目类型 -->
+                    <view class="picker">
+                        选择时间：{{array[index]}}
+                    </view>
+                </picker>
+            </view>
+            <button size="mini" class="button" bindtap="search">查询</button>
+        </view>
+        <view class="line"></view>
+        <view class="list" wx:for="{{achievement[0].achievement}}">
+            <view class="list1">
+                <view class="list2">{{item.specialty}}</view>
+                <view class="list3">{{item.nature}}</view>
+            </view>
+            <view class="list4">
+                <view class="list5">成绩：<text class="list6">{{item.achievement}}</text></view>
+                <view class="list5">学分：<text class="list6"> {{item.credit}}</text></view>
+                <view class="list5">绩点：<text class="list6">{{item.gradePoint}}</text></view>
+            </view>
+        </view></block>
+ <block wx:if="{{cutover[1].isActive}}">
+        <view class="T1">
+            <view class="all">
+                <view class="all1">
+                    <view>{{score}}</view>
+                    <view class="all2">平均分</view>
+                </view>
+                <view class="all1">
+                    <view style="color:orange">{{gradePoint}}</view>
+                    <view class="all2">平均绩点</view>
+                </view>
+                <view class="all1">
+                    <view style="color:green">{{classRanking}}</view>
+                    <view class="all2">班级排名</view>
+                </view>
+                <view class="all1">
+                    <view style="color:red">{{specialtyRankings}}</view>
+                    <view class="all2">专业排名</view>
+                </view>
+            </view>
+            <view class="my-chart">
+                <canvas canvas-id="columnCanvas" disable-scroll="true" class="canvas"></canvas>
+            </view>
+        </view>
+
+        <view class="T2">
+            <view class="bianhua"><text>________ </text>成绩变化趋势图<text> ________</text></view>
+            <canvas style="width: 95%; height: 95%;" canvas-id="yueEle" binderror="canvasIdErrorCallback"></canvas>
+        </view>
+ </block>
+</block>
+
+<!-- 管理端 -->
+<block wx:if="{{guanli==1}}">
+    <form class="T3" report-submit="false" bindsubmit="chengji" bindreset="">
+        <view class="title">上传成绩</view>
+        <view class="T13">
+            <text space="emsp">年  份：</text><input class="T3input" name="schoolYear" value=""
+                placeholder="如:2021上半年"></input>
+        </view>
+        <view class="T13">
+            <text space="emsp">科  目：</text><input class="T3input" name="specialty" value="" placeholder="必修或者选修"></input>
+        </view>
+        <view class="T13">
+            <text space="emsp">性  质：</text><input class="T3input" name="nature" value=""></input>
+        </view>
+        <view class="T13">
+            <view>科目学分：</view><input class="T3input" name="credit" value=""></input>
+        </view>
+        <view class="T13">
+            <text space="emsp">班  级：</text><input class="T3input" name="stuClass" value=""></input>
+        </view>
+        <view class="T13">
+            <text space="emsp">姓  名：</text><input class="T3input" name="stuName" value="{{form}}"></input>
+        </view>
+        <view class="T13">
+            <text space="emsp">学  号：</text><input class="T3input" name="stuNumber" value="{{form}}"></input>
+        </view>
+        <view class="T13">
+            <text space="emsp">成  绩：</text><input class="T3input" name="achievement" value="{{form}}"></input>
+        </view>
+        <view class="T13">
+            <view>所得学分：</view><input class="T3input" name="gradePoint" value="{{form}}"></input>
+        </view>
+        <button class="default" size="default" form-type="submit">
+            提交
+        </button>
+
+    </form>
+
+</block>

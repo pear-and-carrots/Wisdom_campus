@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cutover":"../../../components/cutover/cutover"
+  },
+  "navigationBarTitleText": "考勤打卡"
+}

@@ -1,0 +1,33 @@
+.Tabs {
+    padding-top: 20rpx;
+}
+
+.feedback {
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    padding: 20rpx;
+    border-radius: 20rpx;
+    border: 1rpx solid rgba(137, 192, 243, 0.533);
+}
+
+.f{
+    margin-bottom: 20rpx;
+}
+
+.textarea {
+    width: 70%;
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 34rpx;
+    color: #666666;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    margin-bottom: 20rpx;
+}
+
+.fTime{
+    font-size: 28rpx;
+    color: #666666;
+}

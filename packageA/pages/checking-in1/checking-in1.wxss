@@ -1,0 +1,91 @@
+.Box{
+  margin: 2%;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx rgb(223, 241, 248);
+  border-radius: 20rpx;
+  background-color: #fff;
+  padding: 10rpx;
+}
+
+.title{
+  color: rgb(8, 8, 104);
+  text-align: center;
+  font-size: 42rpx;
+  font-weight: 600;
+  margin: 2%;
+}
+
+.textTitle{
+  margin-left: 2%;
+}
+
+.input{
+  padding: 10rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 40rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid skyblue;
+  color: #666666;
+}
+
+.picker{
+  color: #666666;
+  padding: 10rpx;
+  margin: 2%;
+  border-radius: 20rpx;
+  border: 1rpx solid skyblue;
+}
+
+.button{
+  border-radius: 50rpx;
+  background-color: skyblue;
+  color: #fff;
+}
+
+/* 考勤列表 */
+.list1{
+  margin: 2%;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border: 1rpx solid #c8eef8;
+  border-radius: 20rpx;
+}
+
+.list_techer{
+  width: 72%;
+}
+
+.list_img{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+
+.list_name{
+  text-align: start;
+  font-size: 28rpx;
+  font-weight: 550;
+}
+
+.list_time{
+  font-size: 25rpx;
+  text-align: start;
+}
+
+/* 考勤详情列表 */
+
+.fabu1{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.null{
+  margin: 2%;
+  text-align: center;
+}

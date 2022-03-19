@@ -1,0 +1,124 @@
+.page{
+    margin: 40rpx;
+    padding: 20rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    box-shadow: 5rpx 5rpx 5rpx 5rpx #9edffd;
+}
+
+.tap {
+    display: flex;
+    padding-left: 20rpx;
+    padding-top: 20rpx;
+    align-items: center;
+}
+
+.tap_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    font-size: 52rpx;
+    font-weight: 700;
+    background-color: #0278AE;
+    color: #ffffff;
+}
+
+.tap_jiaoshi {
+    font-weight: 650;
+    padding: 10rpx;
+    font-size: 42rpx;
+}
+
+.bok {
+    border-radius: 20rpx;
+    padding: 0 2%;
+    width: 92%;
+    height: 1000rpx;
+    background-color: #fff;
+    margin: 2%;
+}
+
+.class {
+    margin: 20rpx;
+    padding-bottom: 10rpx;
+    display: flex;
+    height: 50rpx;
+    border-bottom: 1px solid #BEBEBE;
+}
+
+.date {
+    font-size: 28rpx;
+    margin: 2%;
+    border-bottom: 1px solid #BEBEBE;
+    padding-bottom: 1%;
+}
+
+.xinxi {
+    padding: 10rpx;
+    margin: 20rpx;
+    background-color: #f9fdff;
+    border: 1rpx solid #e0f3fd;
+    border-radius: 20rpx;
+}
+
+.info{
+    margin: 20rpx;
+    font-size: 35rpx;
+    font-weight: 600;
+    color: rgb(17, 78, 170);
+}
+
+.neiro {
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    padding: 20rpx;
+    border-radius: 20rpx;
+    border:1rpx unset #9edffd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    margin-bottom: -3%;
+}
+
+.input {
+    margin-top: 2%;
+    padding-left: 15rpx;
+    border-bottom: 1px solid #BEBEBE;
+    width: 60%;
+}
+
+.liyou {
+    font-size: 28rpx;
+    margin: 2%;
+}
+
+.textarea {
+    padding: 20rpx;
+    border-radius: 20rpx;
+    background-color: #F7F7FA;
+    border: 1rpx solid #e7e7f8;
+    margin-left: 40rpx;
+    margin-bottom: 40rpx;
+    width: 460rpx;
+}
+
+.tijiao {
+    margin-top: 50rpx;
+    display: flex;
+    height: 70rpx;
+    width: 240rpx;
+    border-radius: 20rpx;
+    margin-left: 30%;
+    align-items: center;
+    justify-content: center;
+    background-color: #0278AE;
+    color: #fff;
+}

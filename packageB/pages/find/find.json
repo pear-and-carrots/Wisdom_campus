@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "publish":"../../../components/publish/publish",
+    "comment":"../../../components/comment/comment",
+    "cutover":"../../../components/cutover/cutover"
+  },
+  "navigationBarTitleText": "失物招领"
+}

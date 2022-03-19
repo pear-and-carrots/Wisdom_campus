@@ -1,0 +1,113 @@
+<block wx:if="{{guanli==0}}">
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+  <form bindsubmit="formSubmit">
+    <view class='bg'>
+      <view style="margin-bottom:20rpx;background-color:#ffff;padding:10rpx;border-radius:15rpx;;border:1rpx solid #8888;">
+        <view class='item'>
+          <text space="emsp">姓  名：</text>
+          <input name='studentName' value="{{neirong}}" placeholder="请输入姓名" maxlength='15' class='bk' />
+        </view>
+        <view class='item'>
+          <text space="emsp">班  级：</text>
+          <input name='className' value="{{neirong}}" placeholder="例：信计1196" maxlength='15' class='bk' />
+        </view>
+        <view class='item'>
+          <text space="emsp">学  号：</text>
+          <input name='studentNo' value="{{neirong}}" placeholder="请输入学号" maxlength='15' class='bk' />
+        </view>
+      </view>
+      <view style="margin-bottom:20rpx;background-color:#ffff;padding:10rpx;border-radius:15rpx;border:1rpx solid #8888;">
+        <view class='item'>
+          请假类型：
+          <view class='bk'>
+            <picker range="{{leave}}" value="{{index}}" style="color:#888" bindchange="picker">{{leave[index]}}</picker>
+            <!-- <input name='leaveType' placeholder="病假输1/事假输2" maxlength='15' type="number" /> -->
+          </view>
+        </view>
+        <view class='item'>
+          请假理由：
+          <view class='bk'>
+            <input name="leaveReason" value="{{neirong}}" placeholder="请输入请假理由" maxlength='500' auto-height />
+          </view>
+        </view>
+        <view class='item'>
+          开始时间：
+          <view class='bk'>
+            <picker mode="date" value="{{date}}" bindchange="changeDate" name="startTime" >
+              {{date}}
+            </picker>
+          </view>
+        </view>
+        <view class='item'>
+          结束时间：
+          <view class='bk'>
+            <picker mode="date" value="{{date1}}" bindchange="changeDate1" name="endTime" start="{{date}}">
+              {{date1}}
+            </picker>
+          </view>
+        </view>
+        <view class='item'>
+          请假天数：
+          <input name='leaveDays' value="{{neirong}}" placeholder="请输入请假天数" maxlength='15' class='bk' />
+        </view>
+      </view>
+      <view style="margin-bottom:20rpx;background-color:#ffff;padding:10rpx;border-radius:15rpx;;border:1rpx solid #8888;">
+        <view class='item'>
+          上传图片：
+          <view class='uploaderpic' wx:for="{{files}}" wx:key="{{index}}">
+            <image src='{{item}}' class='upload-img'></image>
+          </view>
+          <view class='uploader' wx:if="{{upload}}" bindtap="previewImage">
+            <view class='add-icon'>+</view>
+            <view class='title'>添加图片</view>
+          </view>
+        </view>
+        <button class='btn' bindtap='delete' size="mini" style="background-color:red">删除</button>
+      </view>
+      <button class='btn' formType="submit">提交</button>
+    </view>
+
+  </form>
+</block>
+ <block wx:if="{{cutover[1].isActive}}">
+  <view class="list" wx:for="{{shenpi}}">
+    <view class="list_yuanyin">
+      <view style="font-weight:550;font-size:30rpx;color:#88;margin:10rpx;">{{item.leaveDays}}</view>
+      <view style="font-size:28rpx;margin:10rpx">{{item.leaveReason}}</view>
+    </view>
+    <view style="width:35%;margin-right:20rpx">
+      <view class="list_time">{{item.endTime}}</view>
+      <view class="list_zhuangtai {{item.shenpi?'list_zhuangtai':'list_zhuangtai2'}}">{{item.shenpi?"已审批":"未审批"}}</view>
+    </view>
+  </view></block>
+  
+</block>
+<block wx:if="{{guanli==1}}">
+<cutover cutover="{{cutover1}}" bindtabsIemChange="handleTtabsIemChange1"></cutover>
+ <block wx:if="{{cutover1[0].isActive}}">
+    <navigator class="list" wx:for="{{shenpi1}}" url="../../pages/leave_details/leave_details?id={{item._id}}">
+    <view class="list_yuanyin">
+      <view style="font-weight:550;font-size:30rpx;color:#88;margin:10rpx;">{{item.leaveDays}}</view>
+      <view style="font-size:28rpx;margin:10rpx">{{item.leaveReason}}</view>
+    </view>
+    <view style="width:35%;margin-right:20rpx">
+      <view class="list_time">{{item.endTime}}</view>
+      <view class="list_zhuangtai  {{item.shenpi?'list_zhuangtai':'list_zhuangtai2'}}">{{item.shenpi?"已审批":"未审批"}}</view>
+    </view>
+  </navigator>
+</block>
+ <block wx:if="{{cutover1[1].isActive}}">
+    <navigator open-type="redirect" class="list" wx:for="{{shenpi}}" url="../../pages/leave_details/leave_details?id={{item._id}}">
+    <view class="list_yuanyin">
+      <view style="font-weight:550;font-size:30rpx;color:#88;margin:10rpx;">{{item.leaveDays}}</view>
+      <view style="font-size:28rpx;margin:10rpx">{{item.leaveReason}}</view>
+    </view>
+    <view style="width:35%;margin-right:20rpx">
+      <view class="list_time">{{item.endTime}}</view>
+      <view class="list_zhuangtai {{item.shenpi?'list_zhuangtai':'list_zhuangtai2'}}">{{item.shenpi?"已审批":"未审批"}}</view>
+    </view>
+  </navigator>
+</block>
+ </block>
+  

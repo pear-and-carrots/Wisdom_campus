@@ -1,0 +1,161 @@
+.homework {
+  margin: 2%;
+  background-color: rgb(244, 249, 252);
+
+  box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.tt{
+  border: 1rpx solid #8888;
+  background-color: #fff;
+  margin: 15rpx;
+  border-radius: 15rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+
+.homework_course {
+  font-size: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homework_homework {
+  font-size: 32rpx;
+  margin-left: 30rpx;
+}
+
+.homework_content {
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  font-size: 28rpx;
+}
+
+/* 1.商品类型 */
+.leixing_ {
+  border-radius: 15rpx;
+  background-color: #fff;
+  border: 1rpx solid #8888;
+  margin: 15rpx;
+  padding: 15rpx;
+}
+
+/* 图片 */
+.images_box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* background-color: white; */
+}
+
+.img-box {
+  border-bottom: 1px solid #000;
+  color: #ccc;
+  font-size: 200rpx;
+  background-color: azure;
+  justify-content: center;
+  display: flex;
+  border: 5rpx;
+  border-color: rgba(0, 0, 0, 0.452);
+  width: 120rpx;
+  height: 120rpx;
+  margin: 15rpx;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.img-box text{
+  margin-top: -30rpx;
+}
+
+/* 删除图片 */
+.img-delect {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  /* right: -20rpx;
+  top: -20rpx; */
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  margin-top: 20rpx;
+  background-color: rgb(9, 104, 158);
+  color: #fff;
+}
+
+.sign_button {
+  justify-content: center;
+  text-align: center;
+}
+
+/**音频**/
+.play{
+  box-shadow: 1rpx 1rpx 1rpx 1rpx rgb(109, 188, 241);
+  padding: 20rpx;
+  border-radius: 30rpx;
+  background-color: rgb(201, 247, 255);
+  font-size: 30rpx;
+  margin: 10rpx;
+  width: 120rpx;
+}
+
+.input{
+  width: 80%;
+  border-bottom: 1px solid  rgb(109, 188, 241);
+}
+
+.guanli_tap{
+  font-size: 44rpx;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(12, 76, 119);
+}
+
+.guanli_name{
+  padding: 15rpx;
+  margin-top: 15rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 20rpx;
+  background-color: rgb(232, 248, 253);
+}
+
+.guanli_img{
+  margin-top: 20rpx;
+  width: 80%;
+  border-radius: 15rpx;
+}
+
+.neiro{
+background-color: #fff;
+padding:20rpx;
+margin: 20rpx;
+border: 1px solid rgb(109, 188, 241);
+border-radius: 30rpx;
+}
+
+.pingfen{
+  display: flex;
+}
+
+.pingyu{
+  margin-top: 20rpx;
+  border: 1rpx solid rgb(109, 188, 241);
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+

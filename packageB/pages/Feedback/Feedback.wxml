@@ -1,0 +1,13 @@
+<block wx:if="{{guanli==0}}">
+    <Tabs class="Tabs" tabs="{{tabs}}" bindtabsIemChange="handleTtabsIemChange">
+    </Tabs>
+    <publish cloud="{{cloud}}" bind:callParent="parentFunction"></publish>
+</block>
+
+<block wx:if="{{guanli==1}}">
+    <view wx:for="{{xinxi}}" wx:key="-id" class="feedback">
+        <view class="f">意见类型：{{item.classrooms}}</view>
+        <view class="textarea">意见内容：{{item.textarea}}</view>
+        <view class="fTime">提交时间：{{item.time}}</view>
+    </view>
+</block>

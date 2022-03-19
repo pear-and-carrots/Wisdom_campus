@@ -1,0 +1,28 @@
+<form class="form" bindsubmit="formSubmit">
+  <view class="title">身份认证</view>
+  <view class="head">
+    <view class="head_item {{dex == index?'head_itemActive':''}}" wx:for="{{array}}" data-dex="{{index}}"
+      bindtap="selected">{{item}}</view>
+  </view>
+  <block wx:if="{{dex == 0}}">
+    <button bindtap="tea" style="background-color:#065675;color:#fff;margin-top:60rpx">进入体验</button>
+  </block>
+  <block wx:if="{{dex == 1}}">
+    学校：<input class="input" name="学校" auto-focus type="text" />
+    姓名：<input class="input" name="姓名" type="text" />
+    班级：<input class="input" name="班级" type="text" />
+    学号：<input class="input" name="学号" type="number" />
+    <button style="background-color:#065675;color:#fff;width:200rpx;margin-top:60rpx" form-type="submit" class='reject'
+      loading="{{isloading}}" hover-class="btn-active">认证</button>
+  </block>
+  <block wx:if="{{dex == 2}}">
+    学校：<input class="input" name="学校" auto-focus type="text" />
+    姓名：<input class="input" name="姓名" type="text" />
+    电话：<input class="input" name="电话" type="number" />
+    <button style="background-color:#065675;color:#fff;width:200rpx;margin-top:60rpx" form-type="submit" class='reject'
+      loading="{{isloading}}" hover-class="btn-active">认证</button>
+  </block>
+
+
+
+</form>

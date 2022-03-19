@@ -1,0 +1,108 @@
+{
+  "pages": [
+    "pages/shcool/shcool",
+    "pages/about/about",
+    "pages/class/class",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/matter1/matter1",
+        "pages/notice/notice",
+        "pages/notice_details/notice_details",
+        "pages/homework/homework",
+        "pages/homework_upload/homework_upload",
+        "pages/MyHomework/MyHomework",
+        "pages/matter/matter",
+        "pages/matter3/matter3",
+        "pages/checking-in/checking-in",
+        "pages/checking-in1/checking-in1",
+        "pages/sharing/sharing",
+        "pages/stuList/stuList",
+        "pages/activity/activity",
+        "pages/detail/detail",
+        "pages/statistics/statistics",
+        "pages/statistics1/statistics1",
+        "pages/statistics3/statistics3"
+      ]
+    },
+    {
+      "root": "packageB",
+      "name": "pack2",
+      "pages": [
+        "pages/find/find",
+        "pages/postgraduate/postgraduate",
+        "pages/Feedback/Feedback",
+        "pages/psychology/psychology",
+        "pages/psychology_telephone/psychology_telephone",
+        "pages/empty_classroom/empty_classroom",
+        "pages/classroom/classroom",
+        "pages/seting/seting",
+        "pages/authentication/authentication",
+        "pages/payment/payment",
+        "pages/achievement/achievement",
+        "pages/leave/leave",
+        "pages/leave_details/leave_details",
+        "pages/test/test",
+        "pages/timetable/timetable"
+      ]
+    },
+    {
+      "root": "packageC",
+      "name": "pack",
+      "pages": [
+        "pages/situation/situation",
+        "pages/notice/notice",
+        "pages/publish/publish",
+        "pages/indexDetail/indexDetail",
+        "pages/messageBox/messageBox"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f1fbff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/shcool/shcool",
+        "text": "学校",
+        "iconPath": "images/xuexiao.png",
+        "selectedIconPath": "images/xuexiao1.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "班级",
+        "iconPath": "images/banji.png",
+        "selectedIconPath": "images/banji1.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "个人",
+        "iconPath": "images/geren1.png",
+        "selectedIconPath": "images/geren.png"
+      }
+    ]
+  },
+  "plugins": {
+    "kcb-plugin": {
+      "version": "latest",
+      "provider": "wxd4e6c7af049ae5ff"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

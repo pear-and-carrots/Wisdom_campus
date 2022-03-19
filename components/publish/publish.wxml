@@ -1,0 +1,25 @@
+       <form class="" report-submit="false" bindsubmit="bindsubmit" >
+    <!-- 详情 -->
+    <view class="leixing_">
+      <textarea class="textarea" name="textarea" placeholder="{{placeholder}}" value='{{form_info}}'></textarea>
+      <view class="images_box">
+        <block wx:key="imgbox" wx:for="{{imgbox}}">
+          <view class='img-box'>
+            <image class='img' src='{{item}}'></image>
+            <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+              <image class='img' src='../../images/delect.png'></image>
+            </view>
+          </view>
+        </block>
+        <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<9}}">
+          <image class="tjtp" src="../../images/tjtp.png" mode="widthFix" />
+        </view>
+      </view>
+    </view>
+    <view class="sign_button">
+      <button class="sign_in" bindtap="fb" form-type="submit">提交</button>
+    </view>
+
+  </form>
+
+    

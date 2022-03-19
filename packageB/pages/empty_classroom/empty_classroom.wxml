@@ -1,0 +1,46 @@
+<block wx:if="{{guanli==0}}">
+    <!-- 搜索 -->
+<view class="header">
+  <view>
+    <picker class="pricer" range="{{classroomList}}" bindchange="prckerList" value="{{indexx}}">
+      {{classroomList[indexx]}}</picker>
+      <picker class="pricer" range="{{louceng}}" value="{{indexxx}}" bindchange="prckerlouceng">{{louceng[indexxx]}}</picker>
+    <picker class="pricer" range="{{deta}}" value="{{index}}" bindchange="prckerDeta">{{deta[indexs]}}</picker>
+  </view>
+  <button bindtap="chaxun" class="button">
+    查询
+  </button>
+</view>
+<view class="line"></view>
+<block  wx:for="{{classroom}}" wx:key="_id" wx:if="{{item.dete==indexs}}">
+  <view class="list" wx:if="{{!item.borrow}}" data-id="{{item._id}}" bindtap="jieyon" data-date="{{item.date}}">
+    <view class="classroom">{{item.classroom}}</view>
+    <view class="classroom" style="color:green">空闲</view>
+  </view>
+  </block>
+<view class="empty" wx:if="{{classroom.length == 0}}">
+  当前暂无空教室
+</view>
+</block>
+
+<block wx:if="{{guanli==1}}">
+  <view class="header">
+  <view>
+    <picker class="pricer" range="{{classroomList}}" bindchange="prckerList" value="{{indexx}}">
+      {{classroomList[indexx]}}</picker>
+      <picker class="pricer" range="{{louceng}}" value="{{indexxx}}" bindchange="prckerlouceng">{{louceng[indexxx]}}</picker>
+    <picker class="pricer" range="{{deta}}" value="{{index}}" bindchange="prckerDeta">{{deta[indexs]}}</picker>
+  </view>
+  <button bindtap="chaxun" class="button">
+    查询
+  </button>
+</view>
+<view class="line"></view>
+<block  wx:for="{{classroom}}" wx:key="_id" wx:if="{{item.dete==indexs}}">
+  <view class="list" data-id="{{item._id}}" bindtap="jieyon" data-date="{{item.date}}">
+    <view class="classroom">{{item.classroom}}</view>
+    <view class="{{item.borrow?'classroom1':'classroom2'}}">{{item.borrow?"已借出":"空闲"}}</view>
+  </view>
+  </block>
+</block>
+  

@@ -1,0 +1,23 @@
+<view class="biaoti">
+  <view class="tiaozuang" bindtap="tiaozuang">
+    <image src="../../../images/fanhui.png" style="width:60rpx;height:60rpx" mode="heightFix"></image>
+  </view>
+  <view style="font-size: 28rpx;width:87%;text-align:left;margin-bottom:-40rpx"> {{type}}</view>
+</view>
+<view class="page1">
+  <view class="tozhi">{{xinxi.title}}</view>
+  <view class="date">{{xinxi.date}}</view>
+
+  <view class="enspBox">
+    <text space="ensp"> {{xinxi.textarea}}</text>
+    <rich-text class="" nodes="{{xinxi.notice}}">
+      
+    </rich-text>
+      
+    <view wx:for="{{xinxi.src}}" wx:for-item="item1" wx:for-index="index1">
+      <image class="img" src="{{item1.img}}" mode="widthFix" />
+    </view>
+
+  </view>
+
+</view>

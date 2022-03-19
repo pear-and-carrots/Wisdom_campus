@@ -1,0 +1,137 @@
+<!-- 顶部导航 -->
+<block wx:if="{{guanli == 1}}">
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+<!-- 题目区块 -->
+<view class="question_area">
+  <view wx:for="{{qnaire1}}" class="area">{{index+1}}</view>
+</view>
+
+<!-- 设置课堂检测标题 -->
+<view class='container'>
+  <view class="sheet2">
+    <input class="input" placeholder="请设置问卷标题" bindinput="title" name="question" value="{{title}}"
+      style="margin-bottom:10rpx" />
+    <!-- </view> -->
+
+    <!-- 设置测试卷截止提交日期 -->
+    <!-- <view class="sheet2"> -->
+    <view class="sheet3">
+      <text style="font-size:30rpx">设置问卷截止提交日期</text>
+      <view class="timeBox">
+        <view class="nt" bindtap="n1"><text class="xuan" wx:if="{{x1 == true}}">√</text></view>选择问卷截止提交日期为无限期
+      </view>
+      <view class="timeBox">
+        <view class="nt" bindtap="n2"><text class="xuan" wx:if="{{x2 == true}}">√</text></view><text
+          wx:if="{{x2 != true}}">选择设置问卷截止提交日期</text>
+        <view class="ntt" wx:if="{{x2 == true}}">
+          <view style="color:rgb(71, 71, 71);font-size:28rpx">格式：2021-05-05 10:20</view>
+          <input placeholder="请输入您所限答题时长" bindinput="endTime" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='sheet1'>
+     <picker class="pricer" bindchange="bindPickerChange1" value="{{index2}}" range="{{array2}}">
+        <!-- 题目类型 -->
+        <view class="picker">
+          上传类型：{{array2[index2]}}
+        </view>
+      </picker>
+        <input class="input" placeholder='输入班级' bindinput='changeConTitle3'></input>
+  </view>
+  <block wx:if="{{index2 == 0}}">
+    <view class='sheet1'>
+      <picker class="pricer" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <!-- 题目类型 -->
+        <view class="picker">
+          题目类型：{{array[index]}}
+        </view>
+      </picker>
+      <!-- 填写题目信息 -->
+      <input class="input" placeholder="请填写题目" bindblur="question" name="question" value="{{question}}" />
+    </view>
+
+    <form bindsubmit='submit' bindsubmit="bindsubmit" class="sheet">
+
+      <!-- 1.单选题 -->
+      <view wx:if="{{type == 0}}">
+        <view class="container1">
+
+          <block wx:for="{{conLists}}" wx:key="index">
+            <view class='template_title_list flex-x'>
+              <!-- 题目详情 -->
+              <view class="del" bindtap='del' data-index='{{index}}'>-</view>
+              <!-- 选项题目 -->
+              <input class="input" placeholder='输入选项' bindinput='changeConTitle' data-index='{{index}}'></input>
+            </view>
+          </block>
+
+          <view class='template_title flex-x'>
+            <view class='add_con flex-x' bindtap='add'>
+              <text style="background-color:green">+</text>
+              <view>添加选项</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+      <!-- 2.多选题 -->
+      <view wx:if="{{type == 1}}">
+
+        <view class="container1">
+
+          <block wx:for="{{conLists}}" wx:key="index">
+            <view class='template_title_list flex-x'>
+              <view class="del" bindtap='del' data-index='{{index}}'>-</view>
+              <input class="input" placeholder='输入选项' bindinput='changeConTitle' data-index='{{index}}'></input>
+            </view>
+          </block>
+
+          <view class='template_title flex-x'>
+            <view class='add_con flex-x' bindtap='add'>
+              <text style="background-color:green">+</text>
+              <view>添加选项</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 4.填空题 -->
+      <view wx:if="{{type == 2}}">
+      </view>
+
+      <view class="bt {{type == 2?'btActive':''}}">
+        <button class='button' hover-class='none' form-type='submit' bindtap='nextq'>下一题</button>
+        <button class='button' hover-class='none' form-type='submit' bindtap='formSubmit'
+          style="margin-top:20rpx">完成</button>
+        <view class='id'>{{qnaire1.length}}/{{id+1}}</view>
+      </view>
+    </form>
+  </block>
+</view>
+
+<block wx:if="{{index2 == 1}}">
+  <view class="share">
+    <view class="input">仅支持txt文件</view>
+    <view class="shangchuan">
+      <view class="bkuang" bindtap="shangchuan">+</view>
+    </view>
+    <button class="default" bindtap="yun">
+      上传
+    </button>
+  </view>
+</block>
+ </block>
+ <block wx:if="{{cutover[1].isActive}}">
+    <navigator class="xinxi" wx:for="{{xinxi}}" url="../statistics3/statistics3?id={{item._id}}">
+      <view>{{item.title}}</view>
+      <view>发布人：{{item.teacher}}</view>
+      <view>班级：{{item.class}}</view>
+      <view>提交时间：{{item.currentTime}}——{{item.endTime}}</view>
+    </navigator>
+  </block>
+ </block>
+   
+

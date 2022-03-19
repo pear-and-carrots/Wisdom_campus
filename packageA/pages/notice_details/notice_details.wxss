@@ -1,0 +1,28 @@
+.details{
+    margin-bottom: 10rpx;
+    padding: 15rpx;
+    background-color: #fff;
+    position: relative;
+    border-radius: 20rpx;
+    margin: 2%;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+}
+
+.notice{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    font-size: 40rpx;
+}
+.time{
+    margin: 10rpx;
+    font-size: 25rpx;
+    justify-content: center;
+    color: rgb(134, 131, 131);
+    display: flex;
+}
+.textarea{
+    font-size: 30rpx;
+    margin: 2%;
+    width: 96%;
+}

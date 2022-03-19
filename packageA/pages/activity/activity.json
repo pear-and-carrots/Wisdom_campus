@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "publish":"../../../components/publish/publish"
+  },
+    "navigationStyle": "custom"
+}

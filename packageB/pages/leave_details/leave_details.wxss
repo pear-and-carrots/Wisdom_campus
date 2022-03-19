@@ -1,0 +1,122 @@
+.FB {
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-top: 50rpx;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  background-color: #fff;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx rgb(227, 242, 255);
+}
+
+.formTitle {
+  font-weight: 600;
+  font-size: 45rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.formB1 {
+  margin: 20rpx;
+  padding: 15rpx;
+  border-radius: 15rpx;
+  background-color: aliceblue;
+  font-size: 30rpx;
+  border: 1rpx solid #e4e4e4;
+}
+
+.formB1 image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: row;
+  padding-right: 150rpx;
+  padding-left: 150rpx;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.button {
+  margin: 5rpx;
+  color: #fff;
+  border-radius: 40rpx;
+}
+
+.mask {
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(70, 66, 66);
+  z-index: 9999;
+  top: 0;
+  left: -50rpx;
+  -moz-opacity: 0.9;
+  opacity: 0.90;
+  filter: alpha(opacity=90);
+}
+
+.canvas {
+  width: 78%;
+  margin-top: 100rpx;
+  margin-left: 8%;
+  margin-bottom: 20rpx;
+  align-items: center;
+  justify-content: center;
+  min-height: 600rpx;
+  border: 1rpx solid #000;
+  /*//突出canvas画布范围 */
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 20rpx;
+  opacity: 1.0;
+}
+
+.bt{
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+  background-color: red;
+  color: #fff;
+}
+
+.btBox{
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 400rpx;
+  top: 0;
+}
+
+.show {
+  display: block;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+  text-align: center;
+}
+
+.textarea {
+  width: 74%;
+  padding: 20rpx;
+  text-align: left;
+  margin-top: 100rpx;
+  margin-left: 8%;
+  margin-bottom: 20rpx;
+  min-height: 500rpx;
+  border: 1rpx solid #000;
+  /*//突出canvas画布范围 */
+  background-color: #fff;
+  border-radius: 20rpx;
+}

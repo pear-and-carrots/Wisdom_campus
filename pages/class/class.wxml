@@ -1,0 +1,172 @@
+<block>
+  
+  <!-- 1.学生信息 -->
+  <view class="user_content" style="margin-right: 2%;margin-left: 2%">
+    <view class="user_main">
+      <view class="orders_warp">
+        <!-- 2.2.学生信息 -->
+        <view class="orders_title" style="margin-top:-20rpx">
+          <view class="className">{{stuClass}}班</view>
+          <navigator url="../../packageA/pages/stuList/stuList" class="studentNum">{{quantity}}人></navigator>
+        </view>
+        <view class="orders_contrnt">
+          <view class="orders_navi" bindtap="show" wx:for="{{member}}" hidden="{{index >= 5 && !showAll}}">
+            <image class="member_img" src="{{item.avatarUrl}}" mode="widthFix"></image>
+            <view class="title" hidden="{{index >= 5 && !showAll}}">{{item.name}}</view>
+          </view>
+        </view>
+        <!-- 2.1.公告 -->
+        <view class="notice">
+          <view class="notice_1">
+            <image src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/notice1.png"
+              style="margin:10rpx" mode="widthFix"></image>
+          </view>
+          <swiper autoplay interval="2000" circular vertical class="notice_2">
+            <swiper-item wx:for="{{getNotice}}" class="ee">
+              <view>{{item.data}}</view>
+            </swiper-item>
+          </swiper>
+          <view class="addNew" wx:if="{{guanli==1}}" bindtap="setNotice">发布</view>
+          <view class="addNew" wx:if="{{guanli==1}}" style="margin-left:20rpx;background-color:#F6E3CE;box-shadow: 2rpx 2rpx 2rpx 2rpx #F7BE81" bindtap="setNotice1">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 2.导航栏 -->
+  <view wx:if="{{guanli == 0 ||guanli == 1}}" class="user_content" style="margin-top:390rpx;margin-right: 2%;margin-left: 2%;">
+    <view class="user_main">
+      <view class="orders_warp">
+        <!-- 2.2.迷你应用 -->
+        <!-- <swiper circular indicator-dots indicator-color="#0080FF">
+          <swiper-item> -->
+        <!-- <view class="orders_title">我的工具</view> -->
+        <view class="orders_contrnt">
+          <navigator class="orders_navi" url="../../packageA/pages/notice/notice?stuClass={{stuClass}}&_id={{guanli}}">
+            <text class="t-icon t-icon--online"></text>
+            <view class="title">班级通知</view>
+          </navigator>
+          <navigator class="orders_navi"
+            url="../../packageA/pages/homework/homework?stuClass={{stuClass}}&_id={{guanli}}">
+            <text class="t-icon t-icon--notepad"></text>
+            <view class="title">课程作业</view>
+          </navigator>
+          <block wx:if="{{guanli==0}}">
+            <navigator class="orders_navi"
+              url="../../packageA/pages/checking-in/checking-in?stuClass={{stuClass}}&_id={{guanli}}">
+              <text class="t-icon t-icon--mission-"></text>
+              <view class="title">考勤打卡</view>
+            </navigator>
+          </block>
+          <block wx:if="{{guanli==1}}">
+            <navigator class="orders_navi"
+              url="../../packageA/pages/checking-in1/checking-in1?stuClass={{stuClass}}&_id={{guanli}}">
+              <text class="t-icon t-icon--mission-"></text>
+              <view class="title">考勤打卡</view>
+            </navigator>
+          </block>
+          <block wx:if="{{guanli==0}}">
+            <navigator class="orders_navi" url="../../packageA/pages/statistics3/statistics3">
+              <text class="t-icon t-icon--analytics"></text>
+              <view class="title">信息统计</view>
+            </navigator>
+          </block>
+          <block wx:if="{{guanli==1}}">
+            <navigator class="orders_navi" url="../../packageA/pages/statistics1/statistics1">
+              <text class="t-icon t-icon--analytics"></text>
+              <view class="title">信息统计</view>
+            </navigator>
+          </block>
+        </view>
+        <view class="orders_contrnt" style="margin-bottom:20rpx">
+          <navigator class="orders_navi"
+            url="../../packageA/pages/sharing/sharing?stuClass={{stuClass}}&_id={{guanli}}">
+            <text class="t-icon t-icon--folders-"></text>
+            <view class="title">共享文档</view>
+          </navigator>
+          <block wx:if="{{guanli==0}}">
+            <navigator class="orders_navi" url="../../packageA/pages/matter3/matter3">
+              <text class="t-icon t-icon--raise-hand"></text>
+              <view class="title">课程测验</view>
+            </navigator>
+          </block>
+          <block wx:if="{{guanli==1}}">
+            <navigator class="orders_navi" url="../../packageA/pages/matter1/matter1">
+              <text class="t-icon t-icon--raise-hand"></text>
+              <view class="title">课程测验</view>
+            </navigator>
+          </block>
+          <navigator class="orders_navi"
+            url="../../packageA/pages/activity/activity?stuClass={{stuClass}}&_id={{guanli}}&type=班级活动">
+            <text class="t-icon t-icon--teamwork"></text>
+            <view class="title">班级活动</view>
+          </navigator>
+          <navigator class="orders_navi"
+            url="../../packageA/pages/activity/activity?stuClass={{stuClass}}&_id={{guanli}}&type=班级荣誉">
+            <text class="t-icon t-icon--trophy"></text>
+            <view class="title">班级荣誉</view>
+          </navigator>
+        </view>
+        <!-- </swiper-item>
+        </swiper> -->
+
+      </view>
+    </view>
+  </view>
+
+  <!--3.消息-->
+  <view class="message">
+
+    <!-- 小导航 -->
+    <view class="head1">
+      <view class="head_item1 {{dex == index?'head_itemActive1':''}}" wx:for="{{array}}" data-dex="{{index}}"
+        bindtap="selected">{{item}}</view>
+    </view>
+
+    <!--消息-->
+    <block wx:if="{{dex==0}}">
+      <view class="Mbox" wx:for="{{xinxi}}" wx:if="{{xinxi!==''}}">
+        <view class="messageList">
+          <view class="Mtitle">{{item.course}}{{item.title}}{{item.notice}}</view>
+          <view class="Mtime">{{item.time}}{{item.startTime}}{{item.currentTime}}</view>
+          <view class="Mtext">{{item.content}}</view>
+          <view class="Mtext" wx:if="{{item.teacher}}">{{item.teacher}}老师发布的{{item.genre}}</view>
+        </view>
+        <view class="Mtouch" bindtap="navigateTo" data-id="{{item._id}}" data-genre="{{item.genre}}">点击查看></view>
+      </view>
+      <view class="nullmessage" wx:if="{{xinxi==''}}">
+        今日暂无消息
+      </view>
+    </block>
+    <block wx:if="{{dex==1}}">
+      <view class="Mbox" wx:for="{{xinxi1}}">
+        <view class="messageList">
+          <view class="Mtitle">{{item.course}}{{item.title}}{{item.notice}}</view>
+          <view class="Mtime">{{item.time}}{{item.startTime}}{{item.currentTime}}</view>
+          <view class="Mtext">{{item.content}}</view>
+          <view class="Mtext" wx:if="{{item.teacher}}">{{item.teacher}}老师发布的{{item.genre}}"</view>
+        </view>
+        <view class="Mtouch" bindtap="navigateTo" data-id="{{item._id}}" data-genre="{{item.genre}}">点击查看></view>
+      </view>
+    </block>
+
+  </view>
+
+</block>
+
+<!-- 蒙版弹窗 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <view class='close_mask' bindtap="close_mask">x</view>
+  <input class="input" placeholder="请输入通知轮播栏内容" bindinput="lunbo" />
+  <button class="button" bindtap="inputLunbo">提交</button>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+<view class="modalDlg" wx:if="{{showModal1}}">
+  <view class='close_mask' bindtap="close_mask">x</view>
+  <view class="mbox" wx:for="{{getNotice}}">
+    <view class="mbox1">{{item.data}} </view>
+    <view data-id="{{item._id}}" class="reduce" bindtap="reduceNotice">-</view>
+  </view>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>

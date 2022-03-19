@@ -1,0 +1,65 @@
+.biaoti {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  height: 150rpx;
+  background-color: #f1fbff;
+}
+
+.tiaozuang {
+  display: flex;
+  left: 2%;
+  margin-top: 50rpx;
+}
+
+page{
+  width: 96%;
+}
+
+.page1 {
+  margin: 2%;
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 20rpx;
+  margin-top: 150rpx;
+}
+
+.tozhi {
+  font-size: 45rpx;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10rpx;
+}
+
+.date {
+  font-size: 25rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #888;
+}
+
+.enspBox {
+  display: flex;
+  font-size: 40rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ensp {
+  font-size: 28rpx;
+  margin: 10rpx;
+}
+
+.img {
+  margin-top: 20rpx;
+  width: 90%;
+  height: 100%;
+}

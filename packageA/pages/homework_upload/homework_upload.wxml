@@ -1,0 +1,68 @@
+<block wx:if="{{guanli==0}}">
+  <view class="homework">
+    <view class="homework_course">
+      {{homework.course}}
+    </view>
+    <view class="tt">
+      <view class="homework_homework">
+        {{homework.homework}}
+      </view>
+      <view class="homework_content">
+        {{homework.content}}
+      </view>
+      <view class="homework_content" wx:if="{{timee!=[]}}">
+        剩余提交时间：{{time}}
+      </view>
+      <view class="homework_content" wx:if="{{time==[]}}">
+        已经过了提交时间了
+      </view>
+    </view>
+
+    <form class="" report-submit="false" bindsubmit="bindsubmit">
+      <!-- 3.详情 -->
+      <view class="leixing_">
+        <textarea name="textarea" placeholder="作答区域" value='{{form_info}}'></textarea>
+        <view class="images_box">
+          <block wx:key="imgbox" wx:for="{{imgbox}}">
+            <view class='img-box'>
+              <image class='img' src='{{item}}'></image>
+              <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+                <image class='img' src='../../images/delect.png'></image>
+              </view>
+            </view>
+          </block>
+          <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<9}}"><text>+</text></view>
+        </view>
+        <view class="play" bindtap="yinpin">录制音频</view>
+        <view class="play" bindtap='play'>播放录音</view>
+      </view>
+      <view class="sign_button" wx:if="{{date<=homework.date}}">
+        <button size="mini" class="sign_in" bindtap="fb" form-type="submit">{{ids==1?"提交":"修改"}}</button>
+      </view>
+    </form>
+  </view>
+</block>
+<block wx:if="{{guanli==1}}">
+  <view class="guanli_tap">{{xinxi.course}}</view>
+  <view class="neiro">
+    <view class="guanli_name">作业详情：{{xinxi.content}}</view>
+    <view class="guanli_name"> 完成学生：{{xinxi1.stuName}}</view>
+    <view class="guanli_name">作答情况：{{xinxi1.textarea}}
+      <view wx:for="{{xinxi1.src}}" wx:for-item="item1" wx:for-index="index1">
+        <image class="guanli_img" src="{{item1}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{!xinxi1.fengshu}}" class="neiro">
+    <view class="guanli_name" style="display:flex;flex-direction: row;"><text>评分：</text><input class="input" value="{{form_info}}" placeholder="输入分数" bindinput="fengshu"></input>
+    </view>
+    <textarea class="pingyu" value="{{form_info}}" placeholder="输入评语" bindinput="fengshu1"> </textarea>
+    <button bindtap="guanli">确定</button>
+  </view>
+  <view wx:if="{{xinxi1.fengshu}}" class="neiro">
+    <view class="guanli_name">评分:{{xinxi1.fengshu}}</view>
+    <view wx:if="{{fengsgu!=[]}}" class="guanli_name1">评语：{{xinxi1.fengshu1}}</view>
+
+  </view>
+
+</block>

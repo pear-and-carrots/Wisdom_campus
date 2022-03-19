@@ -1,0 +1,41 @@
+<view class="FB">
+    <view class="formTitle">请假管理</view>
+    <view class="formBox">
+        <view class="formB1">班级：{{leave.className}}</view>
+        <view class="formB1">姓名：{{leave.studentName}}</view>
+        <view class="formB1">请假类型：{{leave.leaveDays}}</view>
+        <view class="formB1">请假原因：{{leave.leaveReason}}</view>
+        <view class="formB1">请假时间：{{leave.startTime}}</view>
+        <view class="formB1">请假结束时间：{{leave.endTime}}</view>
+            <view class="formB1" wx:if="{{leave.textarea}}">审批不通过：{{leave.textarea}}</view>
+        <view class="formB1">
+            <image class="" src="{{leave.fileIDs}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+            <image class="" src="{{leave.img}}" />
+        </view>
+        <view class="buttonBox" wx:if="{{!leave.shenpi}}">
+            <button size="mini" class="button" bindtap="bohui" style="background-color: red;">驳回审批</button>
+            <button size="mini" class="button" bindtap="toguo" style="background-color: green;">审批通过</button>
+        </view>
+    </view>
+    <view class="main {{toguo?'show':'hidden'}}">
+        <view class="mask">
+            <canvas class="canvas" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart"
+                bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd"
+                binderror="canvasIdErrorCallback"></canvas>
+            <view class="btBox">
+                <button class="bt" type="default" bindtap="cleardraw" style="margin-bottom:20rpx">清除画布</button>
+                <button class="bt" type="default" bindtap="getimg" style="margin-bottom:20rpx">上传签名</button>
+                <button class="bt" bindtap="toguo1" style="margin-top:10rpx">关闭画布</button></view>
+        </view>
+    </view>
+    <view class="main {{bohui?'show':'hidden'}}">
+        <view class="mask">
+            <!-- <view class="canvas"> -->
+                <textarea class="textarea" value="{{textarea}}" placeholder="驳回原因" bindblur="bindblur"></textarea>
+                <button class="bt" style="background-color:green;color:#fff;margin-bottom:20rpx" bindtap="bohui1">确定</button>
+                <button class="bt" style="background-color:red;color:#fff;margin-top:10rpx" bindtap="toguo1">取消</button>
+            <!-- </view> -->
+        </view>
+    </view>
+
+</view>

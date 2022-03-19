@@ -1,0 +1,59 @@
+<view class="page">
+  <view class="tap">
+    <view class="tap_img">空</view>
+    <view class="tap_jiaoshi"> 教室借用</view>
+  </view>
+  <block wx:if="{{guanli==0||!xinxi.borrow}}">
+    <form class="bok" bindsubmit="tijiao">
+      <view class="xinxi">
+        <view class="info">教室信息</view>
+        <view class="class">借用教室：{{xinxi.classroom}}</view>
+        <view class="class">借用时间：{{xinxi.date}}</view>
+      </view>
+      <view class="xinxi">
+        <view class="info">填写借用人信息</view>
+        <view class="neiro">
+          <view class="name">借用人姓名:</view>
+          <input class="input" name="name" value="{{neiro}}" bindinput=""></input>
+        </view>
+        <view class="neiro">
+          <view class="name">借用人学院:</view>
+          <input class="input" name="college" value="{{neiro}}" bindinput=""></input>
+        </view>
+        <view class="neiro">
+          <view class="name">借用人班级:</view>
+          <input class="input" name="class" value="{{neiro}}" bindinput=""></input>
+        </view>
+          <view style="padding-left:40rpx;margin-bottom:20rpx" class="name">
+            借用的理由：
+          </view>
+        <textarea class="textarea" value="{{neiro}}" name="textarea" placeholder="请填写借用原因">
+
+      </textarea>
+      </view>
+      <button class="tijiao" form-type="submit">提交申请</button>
+    </form>
+  </block>
+  <block wx:if="{{guanli==1&&xinxi.borrow}}" >
+    <view class="xinxi">
+      <view class="info">教室信息</view>
+      <view class="class">借用教室：{{xinxi.classroom}}</view>
+      <view class="class">借用时间：{{xinxi.date}}</view>
+    </view>
+    <view class="xinxi">
+      <view class="info">借用人信息</view>
+      <view class="class">
+        <view class="name">借用人姓名：{{xinxi.type.name}}</view>
+      </view>
+      <view class="class">
+        <view class="name">借用人学院：{{xinxi.type.college}}</view>
+      </view>
+      <view class="class">
+        <view class="name">借用人班级：{{xinxi.type.class}}</view>
+      </view>
+      <view class="class">
+        借用的理由：{{xinxi.type.textarea}}
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,30 @@
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange"></cutover>
+<view class="bangding">
+    <view class="bangding_left">绑定卡号/学号</view>
+    <view class="bangding_right">{{stuNumber}}</view>
+</view>
+ <block wx:if="{{cutover[0].isActive}}">
+     <view class="congzhi">
+        <view class="congzhi_jinge">充值金额</view>
+        <view class="feiyong">
+            <view class="feiyong_a {{id == index?'feiyong_aActive':''}}" wx:for="{{feiyong}}" wx:key="index" data-id="{{item.id}}" bindtap="feiyong">{{item.name}}</view>
+        </view>
+    </view>
+ </block>
+ <block wx:if="{{cutover[1].isActive}}">
+     <view class="congzhi">
+        <view class="congzhi_jinge">充值金额</view>
+        <view class="feiyong">
+            <view class="feiyong_b {{id == index?'feiyong_bActive':''}}" wx:for="{{feiyong}}" wx:key="index" data-id="{{item.id}}" bindtap="feiyong">{{item.name}}</view>
+        </view>
+    </view>
+ </block>
+  <block wx:if="{{cutover[2].isActive}}">
+      <view class="congzhi">
+        <view class="congzhi_jinge">应缴费用</view>
+        <view class="jiaona">$10000</view>
+    </view>
+  </block>
+   
+
+<button class="button" bindtap="button">立即充值</button>

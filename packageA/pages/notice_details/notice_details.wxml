@@ -1,0 +1,6 @@
+<view class="details">
+    <view class="notice">{{details.notice}}</view>
+    <view class="time">{{details.time}}</view>
+    <!-- <view class="textarea">{{details.textarea}}</view> -->
+    <text class="textarea" space="nbsp">{{details.textarea}}</text>
+</view>

@@ -1,0 +1,280 @@
+.gongxiang {
+  display: flex;
+  background-color: #fff;
+}
+
+.gongxiang_top {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64rpx;
+  background-color: rgba(218, 216, 216, 0.533);
+  border-radius: 18rpx;
+  margin: 16rpx;
+}
+
+.xinxi {
+  display: flex;
+  align-items: center;
+}
+
+.bk {
+  border-radius: 10rpx;
+  border: 2rpx solid #888;
+  background-color: #fff;
+  padding: 10rpx;
+  width: 65%;
+}
+
+.leixing_ {
+  width: 93%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #8888;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-top: 15rpx;
+  padding: 10rpx;
+}
+
+/* 图片 */
+.images_box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.img-box {
+  border-bottom: 1px solid #000;
+  color: #ccc;
+  font-size: 320rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 5rpx;
+  border-color: rgba(0, 0, 0, 0.452);
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 35rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+/* 删除图片 */
+.img-delect {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  margin-top: 20rpx;
+  background-color: rgb(71, 176, 236);
+
+}
+
+.sign_button {
+  justify-content: center;
+  text-align: center;
+}
+
+.btm_tool {
+  border-top: 1px solid #ccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #ffffff;
+  display: flex;
+}
+
+.btm_tool .tool_item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  position: relative;
+  border-right: 1rpx solid #ccc;
+}
+
+.btm_tool .tool_item .kefu_button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.btm_tool .btn_cart {
+  flex: 2;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0099ff;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.btm_tool .btn_buy {
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0099ff;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+/* 请假结果 */
+.list {
+  margin: 2%;
+  padding: 10rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  text-align: left;
+  /* justify-content: space-between; */
+  border: 2rpx solid #8888;
+}
+
+.list_yuanyin {
+  width: 85%;
+}
+
+.list_time {
+  text-align: left;
+  font-size: 25rpx;
+  color: #888;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: 40rpx;
+}
+
+.list_zhuangtai {
+  width: 60%;
+  margin-left: 25%;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  background-color: rgb(224, 239, 240);
+  box-shadow:1rpx 1rpx 1rpx 1rpx rgb(180, 198, 199);
+}
+
+.list_zhuangtai1 {
+  width: 60%;
+  margin-left: 25%;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  background-color: rgb(252, 182, 135);
+  box-shadow:1rpx 1rpx 1rpx 1rpx rgb(250, 172, 119);
+}
+
+.list_zhuangtai2 {
+  width: 60%;
+  margin-left: 25%;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  background-color: #d5edf8;
+  box-shadow:1rpx 1rpx 1rpx 1rpx #83c3e0;
+}
+
+/*问题解答*/
+.jieida {
+  border-bottom: 1px solid #8888;
+  margin: 2%;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+}
+
+.type {
+  font-size: 30rpx;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+}
+
+.time {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  color: #888;
+  font-size: 25rpx;
+}
+
+.shenhe {
+  border-bottom: 1px solid #000;
+}
+
+.zhuangtai {
+  width: 100rpx;
+  text-align: center;
+  padding: 5rpx;
+  background-color: rgb(242, 247, 242);
+  border-radius: 50rpx;
+}
+
+.answer {
+  display: flex;
+  position: relative;
+  font-size: 22rpx;
+  margin: 10rpx;
+}
+
+/* 咨询结果 */
+.dafu1 {
+  margin-top: 45rpx;
+  text-align: center;
+  font-size: 24rpx;
+  height: 35rpx;
+  padding: 15rpx;
+  border-radius: 20rpx;
+  background-color: rgb(252, 182, 135);
+  box-shadow:1rpx 1rpx 1rpx 1rpx rgb(250, 172, 119);
+}
+
+.dafu2{
+  margin-top: 45rpx;
+  text-align: center;
+  font-size: 24rpx;
+  height: 35rpx;
+  padding: 15rpx;
+  border-radius: 20rpx;
+  background-color: rgb(224, 239, 240);
+  box-shadow:1rpx 1rpx 1rpx 1rpx rgb(180, 198, 199);
+}
+
+
+.timeBox {
+  display: flex;
+  flex-direction: row;
+}

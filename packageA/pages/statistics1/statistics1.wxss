@@ -1,0 +1,369 @@
+/* miniprogram/pages/testSAS/testSAS.wxss */
+page {
+  /* background: #fcbe3960; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.head_item {
+  font-size: 32rpx;
+  /* font-weight: 500; */
+}
+
+.question_area {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin: 3%;
+  border-radius: 20rpx;
+  border: 1rpx solid #8888;
+}
+
+.area {
+  text-align: center;
+  width: 5%;
+  margin: 10rpx;
+  background-color: #ccebf8;
+  padding: 10rpx;
+  border: 1px solid #99d2eb;
+  border-radius: 10rpx;
+}
+
+.sheet {
+  background: #fff;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 96%;
+  padding-bottom: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #8888;
+}
+
+.sheet1 {
+  background: #fff;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #8888;
+}
+
+.sheet2 {
+  background: #fff;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #8888;
+  justify-content: flex-start;
+}
+
+.sheet3 {
+  background-color: #ccebf8;
+  border: 1px solid #99d2eb;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.naire {
+  height: 620rpx;
+}
+
+.textarea {
+  width: 90%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: -60rpx;
+  padding: 15rpx;
+  border: 1rpx solid #8888;
+  border-radius: 20rpx;
+}
+
+.question {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+  margin-left: 32rpx;
+}
+
+.border {
+  height: 2rpx;
+  width: 90%;
+  background-color: #d4d4d4;
+  margin: 16rpx auto;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  text-indent: 14rpx;
+  margin-top: 40rpx;
+}
+
+.radio {
+  margin-bottom: 14rpx;
+}
+
+.bt {
+  margin-top: 400rpx;
+}
+
+.btActive {
+  margin-top: 100rpx;
+}
+
+.button {
+  background: #0278ae;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.button::after {
+  border: 0;
+}
+
+.id {
+  text-align: center;
+  font-size: 27rpx;
+  color: #888;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+/* 管理端上传 */
+.shangchuan {
+  position: relative;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  margin-top: 30rpx;
+  background-color: #fff;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.pricer {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  background: #f1f1f1;
+  border-radius: 12rpx;
+  padding: 10rpx;
+  border: 1rpx solid #8888;
+  color: #888;
+}
+
+.input {
+  background-color: #ccebf8;
+  margin-top: 10rpx;
+  border-radius: 12rpx;
+  color: #666666;
+  border: 1px solid #99d2eb;
+  padding: 10rpx;
+}
+
+.slider {
+  width: 94%;
+  margin-top: 10rpx;
+  margin-right: 40rpx auto;
+  margin-left: 40rpx auto;
+  background-color: #f1f1f1;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #8888;
+}
+
+.container1 {
+  /* height: 700rpx; */
+  margin-bottom: -300rpx;
+}
+
+.selectTrue {
+  margin-top: 20rpx;
+  margin-left: 82%;
+  font-size: 25rpx;
+  font-weight: 550;
+}
+
+.flex-x {
+  display: flex;
+  align-items: center;
+}
+
+.template_title,
+.template_title1,
+.template_title_list {
+  height: 90rpx;
+  background: #fff;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+}
+
+.template_title1 {
+  background: none;
+}
+
+.template_title_list {
+  margin-bottom: 4rpx;
+}
+
+.template_title>view,
+.template_title1>view {
+  font-size: 32rpx;
+  color: #8f8f8f;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+}
+
+.template_title>input {
+  font-size: 28rpx;
+  color: #808080;
+  text-align: right;
+  flex-grow: 1;
+}
+
+.selectBox {
+  margin: 12rpx;
+}
+
+/* 添加内容 */
+
+.add_con>text {
+  height: 40rpx;
+  width: 40rpx;
+  font-size: 40rpx;
+  display: block;
+  margin-right: 20rpx;
+  line-height: 44rpx;
+  font-weight: 700;
+  color: #fff;
+  background-color: crimson;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 35rpx;
+}
+
+.add_con>view {
+  font-size: 32rpx;
+  color: #7885cb;
+}
+
+/* 删除内容 */
+
+.del {
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: crimson;
+  margin-right: 14rpx;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 35rpx;
+  font-size: 45rpx;
+  font-weight: 700;
+}
+
+input {
+  flex-grow: 1;
+  color: #808080;
+  background-color: #ccebf8;
+  border: 1px solid #99d2eb;
+}
+
+.btn {
+  margin-top: 120rpx;
+}
+
+/* 3.上传文件 */
+.shangchuan {
+  display: flex;
+  justify-content: center;
+}
+
+.bkuang {
+  height: 200rpx;
+  width: 200rpx;
+  font-size: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  border: 5rpx solid #888;
+  border-radius: 20rpx;
+  color: rgb(83, 76, 76);
+  background-color: rgb(240, 236, 236);
+  padding-bottom: 20rpx;
+}
+.default {
+  margin-top: 30rpx;
+  background-color: rgb(71, 176, 236);
+  color: #fff;
+}
+
+.share {
+  background-color: #fff;
+  margin: 2%;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #8888;
+}
+
+.timeBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.nt {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 5rpx;
+  border: 1rpx solid #8888;
+  margin-right: 15rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+
+.ntt {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeBox input {
+  background-color: #fff;
+  padding: 5rpx;
+  border: 1rpx solid #8888;
+  border-radius: 10rpx;
+}
+
+.xuan {
+  text-align: center;
+  padding-left: 20%;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: green;
+}
+.xinxi{
+  margin: 2%;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #8cd5f1;
+  font-size: 24rpx;
+
+}

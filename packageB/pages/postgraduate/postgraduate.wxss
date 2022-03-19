@@ -1,0 +1,213 @@
+/* 1.顶部导航 */
+/* .head{
+  top:0;
+  position: fixed;
+  z-index: 1;
+} */
+
+.tap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0278ae;
+  font-size: 40rpx;
+}
+
+.shiwu {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  border: 1rpx solid #d6f0fd;
+}
+
+.shiwu_detail {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(250, 252, 253);
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+
+.shiwu_avatarUrl {
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+
+.shiwu_img {
+  border-radius: 100%;
+}
+
+.shgiwu_neiro {
+  display: flex;
+}
+
+.neiro_img {
+  position: relative;
+  bottom: -30rpx;
+  width: 180rpx;
+  height: 180rpx;
+  left: -100rpx;
+}
+
+.pricer {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  background: #f1f1f1;
+  border-radius: 12rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #8888;
+  color: #888;
+}
+
+.button {
+  background-color: rgb(17, 130, 175);
+}
+
+.header {
+  margin: 2%;
+  border: 1rpx solid #8888;
+  border-radius: 20rpx;
+  background: #fff;
+  padding: 16rpx 26rpx;
+}
+
+.search {
+  background: #f1f1f1;
+  border-radius: 12rpx;
+  padding: 15rpx;
+  margin: 20rpx;
+  border: 1rpx solid #8888;
+}
+
+.search input {
+  font-size: 28rpx;
+  color: #a1a1a1;
+  width: 100%;
+  height: 100%;
+}
+
+.shiwu_img2 {
+  width: 160rpx;
+}
+
+.shiwu_nickName{
+  width: 30%;
+}
+
+.shiwu_date {
+  width: 70%;
+  position: relative;
+  top: 5%;
+  color: #ccc;
+  font-size: 25rpx;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.bb{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 1.商品类型 */
+.leixing_ {
+  width: 93%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #8888;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-top: 15rpx;
+  padding: 10rpx;
+}
+
+/* 图片 */
+.images_box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.img-box {
+  border-bottom: 1px solid #000;
+  color: #ccc;
+  font-size: 320rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 5rpx;
+  border-color: rgba(0, 0, 0, 0.452);
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 32rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+/* 删除图片 */
+.img-delect {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  margin-top: 20rpx;
+  background-color: #0278AE;
+
+}
+
+.sign_button {
+  justify-content: center;
+  text-align: center;
+}
+
+.input {
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 20rpx;
+  background-color: #fff;
+  padding: 10rpx;
+}
+
+.fabu {
+  width: 100rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 6rpx solid #0278ae;
+  border-radius: 50%;
+  color: #0278ae;
+  font-size: 100rpx;
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+  padding-bottom: 18rpx;
+  background-color: rgb(233, 245, 247);
+  z-index: 1;
+}
+
+.fabu1{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 2%;
+}

@@ -1,0 +1,85 @@
+.box{
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 20rpx;
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+}
+
+.box image{
+  width: 15%;
+
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+
+.text{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.name{
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.title{
+  font-size: 25rpx;
+  color: #666666;
+}
+
+.time_all{
+  width: 46%;
+  color: #666666;
+  display: flex;
+  flex-direction: column;
+  font-size: 23rpx;
+}
+
+.fabu1 {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 2%;
+}
+
+.look{
+  margin: 2%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.canvas{
+  width: 500rpx;
+  height: 400rpx;
+}
+.xinxi_tap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42rpx;
+}
+.is{
+  display: block;
+}
+.tkt{
+  margin-left: 10rpx;
+
+}
+.wuren{
+  margin-top: 100rpx;
+  display: flex;
+  font-size: 40rpx;
+justify-content: center;
+color: rgb(184, 51, 51);
+}

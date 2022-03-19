@@ -1,0 +1,5 @@
+<!-- 1.顶部导航 -->
+<view class="head">
+    <view class="head_item {{item.isActive?'head_itemActive':''}}" wx:for="{{cutover}}" wx:key="id" bindtap="handleItemTap"
+            data-index="{{index}}">{{item.value}}</view>
+</view>

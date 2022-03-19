@@ -1,0 +1,49 @@
+<!-- 1.顶部导航 -->
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange1"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+ <!-- 2.文件列表 -->
+    <view wx:for="{{word}}" class="word" bindtap="openfile" data-fileid="{{item.fileid}}">
+        <view class="word_img">
+            <image class="word_img" src="{{item.avatarUrl}}" mode="widthFix" />
+        </view>
+        <view class="word_text">
+            <view class="word_nic">
+                {{item.nickName}}
+            </view>
+            <view class="word_name">
+                {{item.name}}
+            </view>
+            <!-- <view class="word_name">
+                文件名：{{item.wjname}}
+            </view> -->
+        </view>
+        <view class="word_date">
+            {{item.date}}
+        </view>
+    </view>
+</block>
+ <block wx:if="{{cutover[1].isActive}}">
+    
+
+<!-- 3.上传 -->
+    <view class="share">
+        <input class="input" value="{{name}}" placeholder="请输入文件标题..." bindblur="wordname"></input>
+        <block wx:if="{{guanli==1}}">
+        <input class="input" value="{{name}}" placeholder="请输入上传的班级" bindblur="wordname1"></input>
+        </block>
+          
+        <view class="shangchuan" bindtap="shangchuan" wx:if="{{!tempFilePaths}}">
+            <view wx:if="{{show == false}}" class="bkuang">+</view>
+        </view>
+        <view wx:if="{{show == true}}" class="bBox">
+            <image mode="widthFix" class="bImg"
+                src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/file.png">
+            </image>
+            <view wx:if="{{tempFilePaths}}">
+                {{wjname}}
+            </view>
+        </view>
+        <button class="default" bindtap="yun">
+            上传
+        </button>
+    </view></block>

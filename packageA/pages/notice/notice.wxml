@@ -1,0 +1,23 @@
+<block wx:if="{{guanli==0}}">
+  <view class="noitce" wx:for="{{notice}}"  hover-class="button-click"  wx:key="{{time}}" data-id="{{item._id}}" bindtap="navigator">
+    <view class="n1">
+    <view class="n11">{{item.notice}}</view>
+    <view class="time">{{item.time}}</view>
+  </view>
+    <view class="togao">
+      {{item.textarea}}
+    </view>
+    <view class="gengduo">
+      查看更多
+    </view>
+  </view>
+</block>
+
+
+
+<block wx:if="{{guanli==1}}">
+<view class="banjitozhi">班级通知</view> 
+  <input placeholder="请输入班级" class="glinput" value="{{form_info}}" name="class" bindinput="neueo1"></input>
+  <publish cloud="{{cloud}}" placeholder="{{placeholder}}" stuClass="{{stuClass}}" bind:callParent="parentFunction">
+  </publish>
+</block>

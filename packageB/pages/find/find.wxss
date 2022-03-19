@@ -1,0 +1,285 @@
+/* 1.顶部导航 */
+.shiwu {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  border: 1rpx solid #d6f0fd;
+}
+
+.shiwu_detail {
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+}
+
+.shiwu_avatarUrl {
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.imgBox {
+  margin-top: 10rpx;
+  padding: 15rpx;
+  border-top: 2rpx solid #c8eafc;
+  border-bottom: 2rpx solid #c8eafc;
+  border-radius: 20rpx;
+}
+
+.shiwu_img {
+  border-radius: 100%;
+  margin-right: 10rpx;
+}
+
+.shgiwu_neiro {
+  display: flex;
+}
+
+.shiwuBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.time {
+  position: absolute;
+  right: 6%;
+  width: 100%;
+  text-align: right;
+  font-size: 25rpx;
+  color: #888;
+}
+.time1{
+  width: 100%;
+  text-align: right;
+  font-size: 25rpx;
+  color: #888;
+}
+.neiro_img {
+  position: relative;
+  bottom: -30rpx;
+  width: 180rpx;
+  height: 180rpx;
+  left: -100rpx;
+}
+
+.pricer {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  background: #f1f1f1;
+  border-radius: 12rpx;
+  padding: 15rpx;
+  border: 1rpx solid rgb(177, 175, 175);
+  color: #888;
+}
+
+.button {
+  color: #fff;
+  background-color: #0278ae;
+}
+
+.header {
+  margin: 2%;
+  border: 1rpx solid #d6f0fd;
+  border-radius: 20rpx;
+  background: #fff;
+  padding: 16rpx 26rpx;
+}
+
+.search {
+  background: #f1f1f1;
+  border-radius: 12rpx;
+  padding: 15rpx;
+  border: 1rpx solid rgb(177, 175, 175);
+}
+
+.search input {
+  font-size: 28rpx;
+  color: #a1a1a1;
+  width: 100%;
+  height: 100%;
+}
+
+.fabu {
+  width: 100rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 6rpx solid #0278ae;
+  border-radius: 50%;
+  color: #0278ae;
+  font-size: 100rpx;
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+  padding-bottom: 18rpx;
+  background-color: rgb(233, 245, 247);
+  z-index: 1;
+}
+
+.fabu1 {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 2%;
+}
+
+.shiwu_img2 {
+  width: 240rpx;
+  height: 100%;
+}
+
+.commentBox {
+  margin-bottom: 2%;
+  margin-top: 2%;
+  border-radius: 10rpx;
+  background-color: rgb(246, 250, 252);
+  padding: 2rpx;
+}
+
+.commentminiBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.commentBox image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.commentList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rpx;
+  margin-right: 10rpx;
+  margin-left: 80rpx;
+  border-bottom: 1rpx rgba(212, 229, 255, 0.533) solid;
+}
+
+.CB {
+  margin: 10rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  margin-left: 80rpx;
+}
+
+.commentList1 {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1rpx rgba(212, 229, 255, 0.533) solid;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 25rpx;
+  color: #888;
+}
+
+.commentText {
+  border-radius: 10rpx;
+  margin-left: 70rpx;
+}
+
+.time1 {
+  width: 100%;
+  text-align: right;
+}
+
+.comment_img {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.pinglun {
+  display: flex;
+  background-color: #fff;
+  border: 1rpx solid #e3f6ff;
+  border-radius: 10rpx;
+  padding: 8rpx;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  margin-right: 5rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.shouqi {
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  margin-right: 10rpx;
+  margin-left: 38rpx;
+  width: 10rpx;
+  height: 10rpx;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-bottom: 1%;
+  box-sizing: border-box;
+  top: 0;
+  background-color: rgb(246, 250, 252);
+  padding: 7rpx;
+}
+
+.show {
+  font-size: 28rpx;
+}
+
+.hidden {
+  display: none;
+}
+
+.textarea {
+  width: 85%;
+  padding: 8rpx;
+  background-color: #f1f1f1;
+  border-radius: 20rpx;
+}
+
+.default {
+  width: 15%;
+  background-color: rgb(63, 125, 205);
+  border-radius: 20rpx;
+  color: #fff;
+  font-weight: 550;
+  font-size: 31rpx;
+  padding: 8rpx;
+  text-align: center;
+}
+
+.findLost {
+  margin: 2%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #d2f0fc;
+  padding: 10rpx;
+}
+
+.findLost button {
+  background-color: #0278AE;
+}
+.collect{
+  display: flex;
+}
+.diangzhang{
+position: absolute;
+}
+.like{
+  display: flex;
+  position: relative;
+  bottom: -4rpx;
+  font-size: 28rpx;
+}

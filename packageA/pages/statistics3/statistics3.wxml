@@ -1,0 +1,44 @@
+<block wx:if="{{guanli==0}}">
+  <view wx:for="{{detail}}" wx:if="{{show != true}}" data-_id="{{item._id}}" bindtap="getInto" class="box" >
+  <image src="{{item.avatarUrl}}"></image>
+  <view class="text">
+    <view class="name">{{item.teacher}}</view>
+    <view class="title">{{item.title}}</view>
+  </view>
+  <view class="time_all">
+    <view class="time" style="color:#666666;margin-bottom: 20rpx;">发布时间：{{item.currentTime}}</view>
+    <view class="time" style="color:red">截止日期： {{item.endTime}}</view>
+  </view>
+</view>
+
+</block>
+<block wx:if="{{guanli==1}}">
+<!--<block wx:for="{{xinix!=''}}">-->
+    <view class="xinxi_tap">
+    {{xinxi1.title}}
+  </view>
+    <view wx:for="{{xinxi1.qnaire}}" class="box is">
+     {{index+1}}: {{item.key.question}}
+      <view wx:if="{{item.key.type=='单选题'}}">
+       <canvas  canvas-id="pieCanvas" disable-scroll="true" class="canvas"></canvas>
+      </view>
+            <view wx:if="{{item.key.type=='多选题'}}">
+       <canvas  canvas-id="pieCanvas1" disable-scroll="true" class="canvas"></canvas>
+      </view>
+      <view wx:if="{{item.key.type=='填空题'}}">
+      <view wx:for="{{xinxi2}}" class="tkt">
+        {{item.stuName}}:{{item.answer[tkt]}}
+      </view>
+        
+      </view>
+    </view>
+<!--</block>-->
+<!--  <view wx:if="{{xinxi==''}}">
+    <view class="xinxi_tap">
+    {{xinxi1.title}}
+  </view>
+<view class="wuren">暂时还没有人做答呢</view>
+  </view> -->
+</block>
+  
+  

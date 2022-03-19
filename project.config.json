@@ -1,0 +1,661 @@
+{
+  "cloudfunctionRoot": "cloud/",
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.17.0",
+  "appid": "wx206d5c2dc95323d2",
+  "projectname": "%E6%99%BA%E6%85%A7%E6%A0%A1%E5%9B%AD",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "packageA/pages/matter1/matter1",
+          "pathName": "packageA/pages/matter1/matter1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/about/about",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/postgraduate/postgraduate",
+          "pathName": "packageB/pages/postgraduate/postgraduate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/find/find",
+          "pathName": "packageB/pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/matter1/matter1",
+          "pathName": "packageA/pages/matter/matter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/leave_details/leave_details",
+          "pathName": "packageB/pages/leave_details/leave_details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shcool/shcool",
+          "pathName": "pages/shcool/shcool",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/situation/situation",
+          "pathName": "packageC/pages/situation/situation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/achievement/achievement",
+          "pathName": "packageB/pages/achievement/achievement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/notice/notice",
+          "pathName": "packageC/pages/notice/notice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/checking-in/checking-in",
+          "pathName": "packageA/pages/checking-in/checking-in",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/class/class",
+          "pathName": "pages/class/class",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 12,
+          "name": "packageB/pages/leave_details/leave_details",
+          "pathName": "packageB/pages/leave_details/leave_details",
+          "query": "id=79550af2606719d60d2ffc2170bac8a6",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/notice/notice",
+          "pathName": "packageA/pages/notice/notice",
+          "query": "id=79550af2606719d60d2ffc2170bac8a6",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/sharing/sharing",
+          "pathName": "packageA/pages/sharing/sharing",
+          "query": "id=79550af2606719d60d2ffc2170bac8a6",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/stuList/stuList",
+          "pathName": "packageA/pages/stuList/stuList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/payment/payment",
+          "pathName": "packageB/pages/payment/payment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/empty_classroom/empty_classroom",
+          "pathName": "packageB/pages/empty_classroom/empty_classroom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/indexDetail/indexDetail",
+          "pathName": "packageC/pages/indexDetail/indexDetail",
+          "query": "id=b00064a7608f677e13d266da136c462b",
+          "scene": null
+        },
+        {
+          "id": 19,
+          "name": "packageC/pages/notice/notice",
+          "pathName": "packageC/pages/notice/notice",
+          "query": "type  = '校车查询'",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shcool/shcool",
+          "pathName": "pages/shcool/shcool",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/class/class",
+          "pathName": "pages/class/class",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/postgraduate/postgraduate",
+          "pathName": "packageB/pages/postgraduate/postgraduate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/matter3/matter3",
+          "pathName": "packageA/pages/matter3/matter3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/class/class",
+          "pathName": "pages/class/class",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/find/find",
+          "pathName": "packageB/pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/statistics/statistics",
+          "pathName": "packageA/pages/statistics/statistics",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/psychology_telephone/psychology_telephone",
+          "pathName": "packageB/pages/psychology_telephone/psychology_telephone",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/psychology/psychology",
+          "pathName": "packageB/pages/psychology/psychology",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/authentication/authentication",
+          "pathName": "packageB/pages/authentication/authentication",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/leave/leave",
+          "pathName": "packageB/pages/leave/leave",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/psychology/psychology",
+          "pathName": "packageB/pages/psychology/psychology",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/psychology_telephone/psychology_telephone",
+          "pathName": "packageB/pages/psychology_telephone/psychology_telephone",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/psychology_telephone/psychology_telephone",
+          "pathName": "packageB/pages/psychology_telephone/psychology_telephone",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/find/find",
+          "pathName": "packageB/pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/postgraduate/postgraduate",
+          "pathName": "packageB/pages/postgraduate/postgraduate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/leave/leave",
+          "pathName": "packageB/pages/leave/leave",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/leave_details/leave_details",
+          "pathName": "packageB/pages/leave_details/leave_details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/postgraduate/postgraduate",
+          "pathName": "packageB/pages/postgraduate/postgraduate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/timetable/timetable",
+          "pathName": "packageB/pages/timetable/timetable",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/homework/homework",
+          "pathName": "packageA/pages/homework/homework",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/homework/homework",
+          "pathName": "packageA/pages/homework/homework",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/situation/situation",
+          "pathName": "packageC/pages/situation/situation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/statistics3/statistics3",
+          "pathName": "packageA/pages/statistics3/statistics3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/statistics1/statistics1",
+          "pathName": "packageA/pages/statistics1/statistics1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/sharing/sharing",
+          "pathName": "packageA/pages/sharing/sharing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/matter3/matter3",
+          "pathName": "packageA/pages/matter3/matter3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/activity/activity",
+          "pathName": "packageA/pages/activity/activity",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/postgraduate/postgraduate",
+          "pathName": "packageB/pages/postgraduate/postgraduate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/checking-in/checking-in",
+          "pathName": "packageA/pages/checking-in/checking-in",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 50,
+          "name": "packageA/pages/checking-in1/checking-in1",
+          "pathName": "packageA/pages/checking-in1/checking-in1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/achievement/achievement",
+          "pathName": "packageB/pages/achievement/achievement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/homework/homework",
+          "pathName": "packageA/pages/homework/homework",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/MyHomework/MyHomework",
+          "pathName": "packageA/pages/MyHomework/MyHomework",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/find/find",
+          "pathName": "packageB/pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/detail/detail",
+          "pathName": "packageA/pages/detail/detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/publish/publish",
+          "pathName": "packageC/pages/publish/publish",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/authentication/authentication",
+          "pathName": "packageB/pages/authentication/authentication",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/leave/leave",
+          "pathName": "packageB/pages/leave/leave",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/achievement/achievement",
+          "pathName": "packageB/pages/achievement/achievement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/publish/publish",
+          "pathName": "packageC/pages/publish/publish",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/seting/seting",
+          "pathName": "packageB/pages/seting/seting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/Feedback/Feedback",
+          "pathName": "packageB/pages/Feedback/Feedback",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 63,
+          "name": "packageB/pages/empty_classroom/empty_classroom",
+          "pathName": "packageB/pages/empty_classroom/empty_classroom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/classroom/classroom",
+          "pathName": "packageB/pages/classroom/classroom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/Feedback/Feedback",
+          "pathName": "packageB/pages/Feedback/Feedback",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/publish/publish",
+          "pathName": "packageC/pages/publish/publish",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/homework/homework",
+          "pathName": "packageA/pages/homework/homework",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 68,
+          "name": "packageA/pages/MyHomework/MyHomework",
+          "pathName": "packageA/pages/MyHomework/MyHomework",
+          "query": "ids=2&id=b00064a760a9b3e719e312ce0596b304&class=信计1196",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/homework/homework",
+          "pathName": "packageA/pages/homework/homework",
+          "query": "ids=2&id=b00064a760a9b3e719e312ce0596b304&class=信计1196",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/authentication/authentication",
+          "pathName": "packageB/pages/authentication/authentication",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/publish/publish",
+          "pathName": "packageC/pages/publish/publish",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/statistics3/statistics3",
+          "pathName": "packageA/pages/statistics3/statistics3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/sharing/sharing",
+          "pathName": "packageA/pages/sharing/sharing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/psychology/psychology",
+          "pathName": "packageB/pages/psychology/psychology",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 75,
+          "name": "packageB/pages/psychology_telephone/psychology_telephone",
+          "pathName": "packageB/pages/psychology_telephone/psychology_telephone",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/achievement/achievement",
+          "pathName": "packageB/pages/achievement/achievement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/leave/leave",
+          "pathName": "packageB/pages/leave/leave",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/homework/homework",
+          "pathName": "packageA/pages/homework/homework",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 79,
+          "name": "packageA/pages/homework_upload/homework_upload",
+          "pathName": "packageA/pages/homework_upload/homework_upload",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageB/pages/payment/payment",
+          "pathName": "packageB/pages/payment/payment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/notice/notice",
+          "pathName": "packageC/pages/notice/notice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageC/pages/messageBox/messageBox",
+          "pathName": "packageC/pages/messageBox/messageBox",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "packageA/pages/checking-in1/checking-in1",
+          "pathName": "packageA/pages/checking-in1/checking-in1",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

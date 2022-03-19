@@ -1,0 +1,104 @@
+.dh{
+  width: 93%;
+  height: 70rpx;
+  display: flex;
+  margin: 20rpx;
+  padding: 10rpx;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #8888;
+}
+
+/* 4.退出登录 */
+.end{
+  background-color: rgb(230, 54, 54);
+  color: #fff;
+  font-weight: 550;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+/* 5.退出登录蒙版 */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg {
+  width: 580rpx;
+  height: 500rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 85rpx;
+  background-color: #fff;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.modalDlg text{
+  margin:auto;
+  font-size: 32rpx;
+}
+
+.modalDlg .title{
+  margin:auto;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #213f6b;
+}
+
+.modalDlg .close{
+  text-align: center;
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 50%;
+  background-color: #213f6b;
+  color: #fff;
+}
+
+.modalDlg .title2{
+  margin:auto;
+  padding: 40rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #213f6b;
+}
+
+.reject {
+  color: #fff;
+  /* width: 80rpx;
+  height: 80rpx; */
+  line-height: 50rpx;
+  background: #cf2f07;
+  text-align: center;
+  border-radius: 12rpx;
+  margin-top: 60rpx;
+  margin-bottom: 20rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  font-size: 32rpx;
+  text-indent: 0em;
+}

@@ -1,0 +1,20 @@
+.test{
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+.test_img{
+padding: 20rpx;
+}
+.test_name{
+    padding-top: 20rpx;
+}
+.test_date{
+padding-top: 20rpx;
+position: relative;
+left: 50%;
+}
+.test_wengj{
+    position: relative;
+    bottom:-60rpx;
+    right: 150rpx;
+}

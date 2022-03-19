@@ -1,0 +1,242 @@
+<!-- 顶部导航 -->
+<block wx:if="{{guanli == 1}}">
+<cutover cutover="{{cutover}}" bindtabsIemChange="handleTtabsIemChange"></cutover>
+ <block wx:if="{{cutover[0].isActive}}">
+  <!-- 题目区块 -->
+<view class="question_area">
+  <view wx:for="{{qnaire1}}" class="area">{{index+1}}</view>
+</view>
+
+<!-- 设置课堂检测标题 -->
+<view class='container'>
+  <view class="sheet2">
+    <input class="input" placeholder="请设置课堂检测标题" bindinput="title" name="question" value="{{title}}"
+      style="background-color:#fff" />
+  </view>
+  <view class='sheet1'>
+     <picker class="pricer" bindchange="bindPickerChange1" value="{{index2}}" range="{{array2}}">
+        <!-- 题目类型 -->
+        <view class="picker">
+          上传类型：{{array2[index2]}}
+        </view>
+      </picker>
+        <input class="input" placeholder='输入班级' bindinput='changeConTitle3'></input>
+  </view>
+  <!-- 设置测试卷截止提交日期 -->
+  <view class="sheet2"><text style="font-size:30rpx">设置测试卷截止提交日期</text>
+    <view class="timeBox">
+      <view class="nt" bindtap="n1"><text class="xuan" wx:if="{{x1 == true}}">√</text></view>选择测试卷截止提交日期为无限期
+    </view>
+    <view class="timeBox">
+      <view class="nt" bindtap="n2"><text class="xuan" wx:if="{{x2 == true}}">√</text></view><text
+        wx:if="{{x2 != true}}">选择设置测试卷截止提交日期</text>
+      <view class="ntt" wx:if="{{x2 == true}}">
+        <view style="color:rgb(71, 71, 71);font-size:28rpx">格式：2021-05-05 10:20</view>
+        <input placeholder="请输入您所限答题时长" bindinput="endTime" />
+      </view>
+    </view>
+  </view>
+<!-- 设置答题时限 -->
+  <view class="sheet2"><text style="font-size:30rpx">设置答题时限</text>
+    <view class="timeBox">
+      <view class="nt" bindtap="nt1"><text class="xuan" wx:if="{{xuan1 == true}}">√</text></view>选择答题时限为无限
+    </view>
+    <view class="timeBox">
+      <view class="nt" bindtap="nt2"><text class="xuan" wx:if="{{xuan2 == true}}">√</text></view><text
+        wx:if="{{xuan2 != true}}">选择设置答题时限</text><input wx:if="{{xuan2 == true}}" placeholder="请输入您所限答题时长"
+        bindinput="bindTime" />分钟
+    </view>
+  </view>
+
+  <block wx:if="{{index2 == 0}}">
+    <view class='sheet1'>
+      <picker class="pricer" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <!-- 题目类型 -->
+        <view class="picker">
+          题目类型：{{array[index]}}
+        </view>
+      </picker>
+      <!-- 填写题目信息 -->
+      <input class="input" placeholder="请填写题目" bindblur="question" name="question" value="{{question}}" />
+
+      <!-- 设置分值 -->
+      <view class="slider">
+        设置分值：
+        <slider min="1" max="20" show-value activeColor="green" backgroundColor="#666666" value="{{time}}"
+          bindchange="slideChange"></slider>
+      </view>
+
+    </view>
+    <!-- <swiper class='sheet' current='{{id}}'> -->
+
+
+    <!-- <block wx:for="{{qnaire}}" wx:for-item="i" wx:key="index" data-item='{{i}}'>
+      <swiper-item> -->
+    <form bindsubmit='submit' bindsubmit="bindsubmit" class='sheet'>
+
+      <!-- 1.单选题 -->
+      <view wx:if="{{type == 0}}">
+        <view class="selectTrue">设置答案</view>
+        <view class="container1">
+
+          <block wx:for="{{conLists}}" wx:key="index">
+            <view class='template_title_list flex-x'>
+              <!-- 题目详情 -->
+              <view class="del" bindtap='del' data-index='{{index}}'>-</view>
+              <!-- 选项题目 -->
+              <input class="input" placeholder='输入选项' bindinput='changeConTitle' data-index='{{index}}'></input>
+              <!-- 正确答案 -->
+              <view class="selectBox" bindtap="select" data-id="{{item.id}}" data-islike="{{select1}}"
+                data-dex="{{index}}" data-userid="{{item.user_id}}">
+                <checkbox value="{{index}}" color='#green' />
+              </view>
+            </view>
+          </block>
+
+          <view class='template_title flex-x'>
+            <view class='add_con flex-x' bindtap='add'>
+              <text style="background-color:green">+</text>
+              <view>添加选项</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+      <!-- 2.多选题 -->
+      <view wx:if="{{type == 1}}">
+
+        <view class="selectTrue">设置答案</view>
+        <view class="container1">
+
+          <block wx:for="{{conLists}}" wx:key="index">
+            <view class='template_title_list flex-x'>
+              <view class="del" bindtap='del' data-index='{{index}}'>-</view>
+              <input class="input" placeholder='输入选项' bindinput='changeConTitle' data-index='{{index}}'></input>
+              <view class="selectBox" bindtap="select" data-id="{{item.id}}" data-islike="{{select1}}"
+                data-dex="{{index}}" data-userid="{{item.user_id}}">
+                <checkbox value="{{index}}" color='#green' />
+              </view>
+            </view>
+          </block>
+
+          <view class='template_title flex-x'>
+            <view class='add_con flex-x' bindtap='add'>
+              <text style="background-color:green">+</text>
+              <view>添加选项</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 3.判断题 -->
+      <view wx:if="{{type == 2}}">
+        <view class="selectTrue">设置答案</view>
+        <view class="container1">
+
+          <block wx:for="{{con}}" wx:key="index">
+            <view class='template_title_list flex-x'>
+              <view class="del" style="font-size:35rpx;line-height:42rpx;padding:6rpx">{{item.text}}</view>
+              <!-- <view class="del" bindtap='del' data-index='{{index}}'>-</view> -->
+              <input class="input" placeholder='输入选项' bindinput='changeConTitle' data-index='{{index}}'></input>
+              <view class="selectBox" bindtap="select" data-id="{{item.id}}" data-islike="{{select1}}"
+                data-dex="{{index}}" data-userid="{{item.user_id}}">
+                <checkbox value="{{index}}" color='#green' />
+              </view>
+            </view>
+          </block>
+
+          <view class='template_title flex-x'>
+            <view class='add_con flex-x' bindtap='add'>
+              <text style="background-color:green">+</text>
+              <view>添加选项</view>
+            </view>
+          </view>
+        </view>
+        <!-- <view class='template_title_list flex-x'>
+              <view class="del">T:</view>
+              <input class="input" placeholder='输入选项' bindblur='changeBlur' data-index='{{index}}'></input>
+            </view>
+            <view class='template_title_list flex-x'>
+              <view class="del">F:</view>
+              <input class="input" placeholder='输入选项' bindblur='changeBlur' data-index='{{index}}'></input>
+            </view> -->
+      </view>
+
+      <!-- 4.填空题 -->
+      <view wx:if="{{type == 3}}">
+        <view class="setAnswer" bindtap="tiankon"
+          wx:if="{{da != true}}">点击设置参考答案</view>
+        <view class="container1" wx:if="{{da == true}}">
+
+          <block wx:for="{{correct}}" wx:key="index">
+            <view class='template_title_list flex-x'>
+              <view class="del" bindtap='del' data-index='{{index}}'>-</view>
+              <input class="input" placeholder='输入固定答案' bindinput='changeConTitle1' data-index='{{index}}'></input>
+            </view>
+          </block>
+
+          <view class='template_title flex-x'>
+            <view class='add_con flex-x' bindtap='add'>
+              <text style="background-color:green">+</text>
+              <view>添加参考答案</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="bt">
+        <button class='button' hover-class='none' form-type='submit' bindtap='nextq'>下一题</button>
+        <button class='button' hover-class='none' form-type='submit' bindtap='formSubmit'
+          style="margin-top:20rpx">完成</button>
+        <view class='id'>{{qnaire1.length}}/{{id+1}}</view>
+      </view>
+    </form>
+  </block>
+</view>
+<block wx:if="{{index2 == 1}}">
+  <view class="share">
+    <view class="input" style="color:#666666">仅支持txt文件</view>
+    <view class="shangchuan">
+      <view class="bkuang" bindtap="shangchuan">+</view>
+    </view>
+    <button class="default" style="background-color:rgb(71, 176, 236)" bindtap="yun">
+      上传
+    </button>
+  </view>
+</block>
+</block>
+ <block wx:if="{{cutover[1].isActive}}">
+    <navigator class="xinxi" wx:for="{{xinxi}}" url="../matter3/matter3?id={{item._id}}">
+      <view>{{item.title}}</view>
+      <view>发布人：{{item.teacher}}</view>
+      <view>班级：{{item.class}}</view>
+      <view>提交时间：{{item.currentTime}}——{{item.endTime}}</view>
+    </navigator>
+  </block>
+</block>
+<block wx:if="{{guanli==1}}">
+  <view class="xinxi_tap">
+    {{xinxi1.title}}
+  </view>
+    <view wx:for="{{xinxi1.qnaire}}" class="box is">
+     {{index+1}}: {{item.key.question}}
+      <view wx:if="{{item.key.type=='单选题'}}">
+       <canvas  canvas-id="pieCanvas" disable-scroll="true" class="canvas"></canvas>
+      </view>
+      <view wx:if="{{item.key.type=='多选题'}}">
+       <canvas  canvas-id="pieCanvas1" disable-scroll="true" class="canvas"></canvas>
+      </view>
+       <view wx:if="{{item.key.type=='判断题'}}">
+       <canvas  canvas-id="pieCanvas2" disable-scroll="true" class="canvas"></canvas>
+      </view>
+      <view wx:if="{{item.key.type=='填空题'}}">
+      <view wx:for="{{xinxi2}}" class="tkt">
+        {{item.stuName}}:{{item.answer[tkt]}}
+      </view>
+        
+      </view>
+    </view>
+</block>
+   
+

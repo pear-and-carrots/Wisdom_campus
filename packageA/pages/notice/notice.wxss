@@ -1,0 +1,130 @@
+.noitce {
+  margin-bottom: 10rpx;
+  padding: 15rpx;
+  background-color: #fff;
+  position: relative;
+  border-radius: 20rpx;
+  margin: 2%;
+  box-shadow: 1rpx 1rpx 1rpx 1rpx #8888;
+}
+
+.n1{
+  display: flex;
+  flex-direction: row;
+}
+
+.n11{
+  width: 30%;
+}
+
+.time{
+  width: 70%;
+  font-size: 25rpx;
+  color: #888;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.togao {
+  width: 70%;
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #666666;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.gengduo {
+  position: relative;
+  display: flex;
+  margin-top: 15rpx;
+  font-size: 22rpx;
+  color: #888;
+  right: -85%;
+  border-radius: 30rpx;
+  width: 100rpx;
+}
+
+.button-click {
+  background-color: #f1f1f1;
+}
+
+/* 1.商品类型 */
+.leixing_ {
+  width: 93%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #8888;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-top: 15rpx;
+  padding: 10rpx;
+}
+
+/* 图片 */
+.images_box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.img-box {
+  border-bottom: 1px solid #000;
+  color: #ccc;
+  font-size: 320rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 5rpx;
+  border-color: rgba(0, 0, 0, 0.452);
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 32rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+/* 删除图片 */
+.img-delect {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  margin-top: 20rpx;
+  background-color: rgb(71, 176, 236);
+
+}
+
+.sign_button {
+  justify-content: center;
+  text-align: center;
+}
+.banjitozhi{
+  display: flex;
+  font-size:  50rpx;
+  align-items: center;
+  justify-content: center;
+}
+.glinput {
+  color: #666666;
+  background-color: #fff;
+  padding: 20rpx;
+  box-shadow: 2rpx 5rpx 5rpx 4rpx #d2f0fc;
+  border-radius: 15rpx;
+  margin: 2%;
+}

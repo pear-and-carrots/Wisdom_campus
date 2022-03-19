@@ -1,0 +1,12 @@
+<view class="main">
+  <view class="list1" bindtap="checkingIn" wx:for="{{message}}" wx:key="index" data-_id="{{item._id}}"
+    data-index="{{index}}">
+    <image class="list_img" src="{{item.avatarUrl}}"></image>
+    <view class="list_techer">
+      <view class="list_name">{{item.teacher}}发布的{{item.title}}</view>
+      <view class="list_time">开始时间：<text style="color:#666666">{{item.startTime}}</text></view>
+      <view class="list_time">结束时间：<text style="color:red">{{item.endTime}}</text></view>
+    </view>
+    <!-- <view class="list_zhuangtai">未签到</view> -->
+  </view>
+</view>

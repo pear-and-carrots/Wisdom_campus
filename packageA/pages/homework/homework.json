@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "publish":"../../../components/publish/publish",
+    "cutover":"../../../components/cutover/cutover"
+  },
+  "navigationBarTitleText": "课程作业"
+}

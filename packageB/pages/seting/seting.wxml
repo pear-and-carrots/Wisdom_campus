@@ -1,0 +1,21 @@
+<view class="dh" bindtap="authentication">学校认证
+  <text wx:if="{{stuName != ''}}" style="margin-right:400rpx;text-align:right;font-size:28rpx;background-color:rgb(241, 238, 238);color:green;padding:4rpx; border-radius: 10rpx;box-shadow: 1rpx 1rpx 1rpx 1rpx #8888">已认证</text>
+  <image src="../../../images/jt.png" style="width:40rpx;height:40rpx;"></image>
+  
+</view>
+<view class="dh" bindtap="weizhi">权限设置
+  <image src="../../../images/jt.png" style="width:40rpx;height:40rpx;"></image>
+</view>
+<navigator class="dh" url="../../pages/Feedback/Feedback">意见反馈
+  <image src="../../../images/jt.png" style="width:40rpx;height:40rpx;"></image>
+</navigator>
+
+
+<text wx:if="{{nickName != ''}}" class="end" bindtap="end">退出登录</text>
+<view class="modalDlg" wx:if="{{showModal}}">
+  <text class="close" bindtap="close">X</text>
+  <text class="title">提示</text>
+  <text class="title2">确认退出登录吗？</text>
+  <button class='reject' bindtap="remove" size="mini"> 确定 </button>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>

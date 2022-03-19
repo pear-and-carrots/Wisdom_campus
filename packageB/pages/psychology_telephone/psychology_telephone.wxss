@@ -1,0 +1,77 @@
+.form {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  background-color: #fff;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx rgba(209, 230, 250, 0.533);
+}
+
+.xinxi {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.bk {
+  border-radius: 10rpx;
+  border: 2rpx solid #888;
+  padding: 10rpx;
+  width: 65%;
+}
+
+.radio-group {
+  position: relative;
+  left: 10%;
+}
+
+.btn {
+  background-color: #79caff;
+  color: #fff;
+  width: 120rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+
+.pricer {
+  width: 65%;
+  height: 25%;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 12rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #888;
+  color: #888;
+}
+
+.box{
+  margin: 2%;
+  background-color: #fff;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx rgba(209, 230, 250, 0.533);
+}
+
+.jieda_tap {
+  font-size: 42rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question{
+  margin: 10rpx;
+  padding: 15rpx;
+  border-bottom:1rpx solid rgb(224, 234, 253);
+}
+
+.textarea {
+  margin: 10rpx;
+  padding: 10rpx;
+  border:1rpx solid #79caff;
+  border-radius: 10rpx;
+  width: 94%;
+}

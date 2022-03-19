@@ -1,0 +1,78 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/class/class",
+          "pathName": "pages/class/class",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/about/about",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageB/pages/psychology/psychology",
+          "pathName": "packageB/pages/psychology/psychology",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageB/pages/find/find",
+          "pathName": "packageB/pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageB/pages/find/find",
+          "pathName": "packageB/pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageC/pages/notice/notice",
+          "pathName": "packageC/pages/notice/notice",
+          "query": "type=%E6%A0%A1%E5%9B%AD%E9%A1%BB%E7%9F%A5",
+          "scene": null
+        },
+        {
+          "name": "packageA/pages/checking-in1/checking-in1",
+          "pathName": "packageA/pages/checking-in1/checking-in1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "packageC/pages/notice/notice",
+          "pathName": "packageC/pages/notice/notice",
+          "query": "type=%E6%A0%A1%E5%9B%AD%E9%A1%BB%E7%9F%A5",
+          "scene": null
+        },
+        {
+          "name": "packageC/pages/notice/notice",
+          "pathName": "packageC/pages/notice/notice",
+          "query": "type=校园须知",
+          "scene": null
+        },
+        {
+          "name": "packageA/pages/detail/detail",
+          "pathName": "packageA/pages/detail/detail",
+          "query": "id=79550af260920b5a144848fc120a9af1&type=班级荣誉",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

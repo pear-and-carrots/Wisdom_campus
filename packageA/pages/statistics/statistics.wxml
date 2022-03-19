@@ -1,0 +1,45 @@
+<!-- 标题 -->
+<view class="detial">
+  {{detail.title}}
+</view>
+
+<!-- 题目 -->
+<view class='container'>
+  <block wx:for="{{qnaire}}" wx:for-item="i" wx:key="index" wx:for-index="key" data-item='{{i}}' data-id='{{key}}'>
+    <form bindsubmit='submit' class="submit">
+
+      <view class='naire'>
+        <!-- 题目 -->
+        <view class='question'>{{key+1}} . {{qnaire[key].key.question}}<text style="color:#888">({{qnaire[key].key.type}} )</text></view>
+
+        <!-- 1.多选题 -->
+
+        <checkbox-group class='radio-group' name='answer' bindchange="checkboxChange" data-id='{{key}}'>
+          <label wx:if="{{i.key.type == '多选题'}}" wx:for="{{i.key.conLists}}" wx:key="index"
+            wx:index="{{key}}" class='radio'>
+            <checkbox value="{{zimu[index]}}" />{{zimu[index]}} . {{item.del}}
+          </label>
+        </checkbox-group>
+
+        <!-- 2.单选题 -->
+        <radio-group class='radio-group' name='answer' bindchange="checkboxChange" data-id='{{key}}'>
+          <label wx:if="{{i.key.type == '单选题'}}" wx:for="{{i.key.conLists}}" wx:key="index"
+            wx:index="{{index}}" class='radio'>
+            <checkbox value="{{zimu[index]}}" />{{zimu[index]}} . {{item.del}}
+          </label>
+        </radio-group>
+
+        <!-- 4.填空题 -->
+        <textarea name="answer" cols="30" rows="10" wx:if="{{i.key.type == '填空题'}}" data-id='{{key}}' wx:key="index"
+          wx:index="{{index}}" class="textarea" bindinput="bindin">{{i.completion}}</textarea>
+
+      </view>
+    </form>
+  </block>
+  <button class='button' hover-class='none' form-type='submit' bindtap='formSubmit'>提交</button>
+
+</view>
+
+<!-- <view class="area">
+  <view class="area_cell" wx:for="{{qnaire}}" bindtap="area" value="{{id}}" data-dex="{{index}}">{{index+1}}</view>
+</view> -->

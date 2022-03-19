@@ -1,0 +1,134 @@
+<!-- 1.轮播图 -->
+<view style="border-radius: 40rpx;" class="swiper">
+  <swiper interval="2000" autoplay circular indicator-dots indicator-color="#0080FF">
+    <block wx:for="{{banner}}" wx:key="_id">
+      <swiper-item>
+        <image src="{{item.src}}" style="width:100%;height:300rpx"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 2.导航栏 -->
+<view class="user_content" style="margin-top:30rpx;margin-right: 2%;margin-left: 2%;">
+  <view class="user_main">
+    <view class="orders_warp">
+      <!-- 2.2.迷你应用 -->
+      <view class="orders_contrnt">
+        <view class="orders_navi" style="display:flex;flex-direction: row;margin:20rpx" url="../../pages/good/good">
+          <image src="../../images/HC.png" style="width:40rpx;height:40rpx;border-radius:100%;background-color:#f1fbff">
+          </image>
+          <view style="margin-left:20rpx;">海创智慧校园</view>
+          <view class="addNew" wx:if="{{guanli==1}}" bindtap="publish">发布</view>
+        </view>
+      </view>
+      <swiper circular indicator-dots indicator-color="#0080FF" style="height:180rpx">
+        <swiper-item>
+          <view class="orders_contrnt">
+            <navigator class="orders_navi" url="../../packageC/pages/situation/situation?type=学校概况">
+              <text class="t-icon t-icon--search"></text>
+              <view class="title">学校概况</view>
+            </navigator>
+            <navigator class="orders_navi" url="../../packageC/pages/notice/notice?type=学校通知">
+              <text class="t-icon t-icon--bell"></text>
+              <view class="title">学校通知</view>
+            </navigator>
+            <navigator class="orders_navi" url="../../packageC/pages/notice/notice?type=校园须知">
+              <text class="t-icon t-icon--notepad"></text>
+              <view class="title">校园须知</view>
+            </navigator>
+            <navigator class="orders_navi" url="../../packageC/pages/notice/notice?type=校园动态">
+              <text class="t-icon t-icon--socialmedia"></text>
+              <view class="title">校园动态</view>
+            </navigator>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <!-- <view class="orders_title">我的工具</view> -->
+          <view class="orders_contrnt1">
+            <navigator class="orders_navi" url="../../packageC/pages/notice/notice?type=师资队伍">
+              <text class="t-icon t-icon--team"></text>
+              <view class="title">师资队伍</view>
+            </navigator>
+            <navigator class="orders_navi" url="../../packageC/pages/notice/notice?type=国际交流">
+              <text class="t-icon t-icon--international"></text>
+              <view class="title">国际交流</view>
+            </navigator>
+            <navigator class="orders_navi" url="../../packageC/pages/messageBox/messageBox">
+              <image class="meaasgeBox" src="../../images/messageBox.png"></image>
+              <view class="title">校长信箱</view>
+            </navigator>
+          </view>
+        </swiper-item>
+      </swiper>
+
+      <!-- 2.1.公告 -->
+      <view class="notice">
+        <view class="notice_1">
+          <image style="height:10rpx;margin:5rpx" mode="widthFix"
+            src="cloud://wisdom-2gi81y0ra4bc0adb.7769-wisdom-2gi81y0ra4bc0adb-1305409236/icon/notice.png"></image>
+        </view>
+        <!-- <view class="shu_line"></view> -->
+        <swiper autoplay interval="2000" circular vertical class="notice_2">
+          <swiper-item class="ee" wx:for="{{xinxi}}" wx:key="_id">
+            <view>{{item.data}}</view>
+          </swiper-item>
+        </swiper>
+        <view class="addNew1" wx:if="{{guanli==1}}" bindtap="setNotice1">管理</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 3.校园服务 -->
+<view class="service11">
+  <view class="service1">
+    <view class="cl11"></view>校园服务
+  </view>
+  <view class="service3">
+    <navigator class="service31" url="../../packageC/pages/notice/notice?type=网络服务"><text>网络服务</text>
+      <image class="t-icon t-icon--network-"></image>
+    </navigator>
+    <navigator class="service31" url="../../packageC/pages/notice/notice?type=校车查询"><text>校车查询</text>
+      <image class="t-icon t-icon--school-bus"></image>
+    </navigator>
+    <navigator class="service31" url="../../packageC/pages/notice/notice?type=学术讲座"><text>学术讲座</text>
+      <image class="t-icon t-icon--video-"></image>
+    </navigator>
+  </view>
+</view>
+<!-- 4.专题活动-->
+<view class="service11" style="margin-top:20rpx;padding:0rpx">
+  <view class="service1">
+    <view class="cl11"></view>专题活动
+  </view>
+  <view class="service2" bindtap="huodo">查看更多></view>
+  <view class="list">
+    <view class="item" wx:for="{{getNews}}" wx:key="_id">
+      <navigator url="../../packageC/pages/indexDetail/indexDetail?id={{item._id}}&type=专题活动" data-id="{{item._id}}"
+        bindlongtap="bindlongpress">
+        <view class="item-wrapper">
+          <view class="info">
+            <view class="info1">
+              {{item.title}}
+            </view>
+            <view class="read-num">{{item.date}}</view>
+          </view>
+          <view class="img">
+            <image src="{{item.img[0]}}"></image>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<!-- 轮播通知管理蒙版 -->
+<view class="modalDlg" wx:if="{{showModal1}}">
+  <view class='close_mask' bindtap="close_mask">x</view>
+  <view class="mbox" wx:for="{{xinxi}}">
+    <view class="mbox1">{{item.data}} </view>
+    <view data-id="{{item._id}}" class="reduce" bindtap="reduceNotice">-</view>
+  </view>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>

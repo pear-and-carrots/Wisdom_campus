@@ -1,0 +1,72 @@
+/* 1.商品类型 */
+.leixing_ {
+    width: 91%;
+    border-radius: 10rpx;
+    background-color: #fff;
+    box-shadow: 2rpx 5rpx 5rpx 4rpx #d2f0fc;
+    margin-left: 15rpx;
+    margin-right: 15rpx;
+    margin-top: 15rpx;
+    padding: 20rpx;
+  }
+  
+/* 图片 */
+.images_box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: white;
+  }
+
+  .tjtp{
+    background-color: #f1fbff;
+  }
+  
+  .textarea{
+    width: 100%;
+  }
+
+  .img-box {
+    border-bottom: 1px solid #000;
+    color: #ccc;
+    font-size: 320rpx;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 5rpx;
+    border-color: rgba(0, 0, 0, 0.452);
+    width: 200rpx;
+    height: 200rpx;
+    margin-left: 32rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    position: relative;
+  }
+  
+  /* 删除图片 */
+  .img-delect {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    position: absolute;
+    right: -20rpx;
+    top: -20rpx;
+  }
+  
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  button {
+    margin-top: 40rpx;
+    background-color: rgb(71, 176, 236);
+    color: #fff;
+  }
+  
+  .sign_button {
+    justify-content: center;
+    text-align: center;
+  }

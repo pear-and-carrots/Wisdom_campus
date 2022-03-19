@@ -1,0 +1,4 @@
+<view class="stuList" wx:for="{{stuList}}" wx:key="index">
+  <image src="{{item.avatarUrl}}" mode="widthFix"></image>
+  <view class="stuName">{{item.name}}</view>
+</view>
